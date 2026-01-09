@@ -1,4 +1,4 @@
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,13 +20,13 @@
          */
         
         :root {
-            /* Color Palette: Earth + Science */
-            --earth-dark: #1a1612;
-            --earth-mid: #4a3f35;
-            --earth-light: #f5f1ed;
-            --nature-green: #2d5016;
-            --accent-vital: #4caf50;
-            --accent-warn: #d4af37;
+            /* Color Palette: Softer Earth + Accessible */
+            --earth-dark: #2a2318;
+            --earth-mid: #5a4f45;
+            --earth-light: #faf8f5;
+            --nature-green: #3d6b23;
+            --accent-vital: #5cb85c;
+            --accent-warm: #c9a961;
             
             /* Typography */
             --font-display: 'DM Serif Display', serif;
@@ -156,6 +156,20 @@
             gap: var(--space-lg);
             align-items: center;
             animation: fadeInUp 0.8s ease-out 0.2s both;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: 0;
+            width: 60%;
+            height: calc(100% + 200px);
+            background: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&h=1200&fit=crop') center/cover;
+            opacity: 0.15;
+            z-index: -1;
+            border-radius: 0 0 0 200px;
         }
         
         @keyframes fadeInUp {
@@ -249,14 +263,37 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            min-height: 400px;
         }
         
-        .hero-image {
+        .hero-visual::before {
+            content: '';
+            position: absolute;
             width: 100%;
-            max-width: 500px;
-            height: auto;
-            border-radius: 4px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=800&fit=crop') center/cover;
+            opacity: 0.25;
+            border-radius: 8px;
+            filter: blur(1px);
+        }
+        
+        .hero-visual-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: var(--earth-dark);
+            padding: var(--space-lg);
+            background: rgba(250, 248, 245, 0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+            border: 1px solid rgba(93, 107, 35, 0.2);
+        }
+        
+        .hero-visual-content .tagline {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-style: italic;
+            color: var(--nature-green);
         }
         
         /* Problem Section */
@@ -551,7 +588,6 @@
         <nav>
             <div class="logo">beò</div>
             <div class="nav-links">
-                <a href="https://x.com/bhibeo" target="_blank">@bhibeo</a>
                 <a href="mailto:info@beo.llc" class="cta-header">Contact</a>
             </div>
         </nav>
@@ -576,7 +612,9 @@
             </div>
             
             <div class="hero-visual">
-                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=800&fit=crop" alt="Nature scene" class="hero-image">
+                <div class="hero-visual-content">
+                    <p class="tagline">Reconnect with nature. Reclaim your mind.</p>
+                </div>
             </div>
         </section>
         
@@ -586,7 +624,7 @@
                 
                 <p class="evidence">
                     Social media platforms spent billions engineering your attention. 
-                    They're not just addictive—they're systematically degrading human cognitive capabilities.
+                    They're not just addictive - they're systematically degrading human cognitive capabilities.
                 </p>
                 
                 <div class="problem-list">
@@ -674,9 +712,6 @@
             <div class="cta-buttons">
                 <a href="mailto:info@beo.llc?subject=beò Beta Access Request" class="cta-primary">
                     Request Beta Access
-                </a>
-                <a href="https://x.com/bhibeo" class="cta-secondary" target="_blank">
-                    Follow Launch on X
                 </a>
             </div>
         </section>
