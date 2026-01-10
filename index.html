@@ -9,6 +9,8 @@
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
 
+    <meta name="description" content="Evidence-based digital wellbeing app that helps you regain control through nature-based interventions and mindful breaks.">
+    
     <!-- Fonts: Distinctive pairing -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,13 +25,13 @@
          */
         
         :root {
-            /* Color Palette: Softer Earth + Accessible */
-            --earth-dark: #2a2318;
-            --earth-mid: #5a4f45;
-            --earth-light: #faf8f5;
-            --nature-green: #3d6b23;
-            --accent-vital: #5cb85c;
-            --accent-warm: #c9a961;
+            /* Color Palette: Earth + Science */
+            --earth-dark: #1a1612;
+            --earth-mid: #4a3f35;
+            --earth-light: #f5f1ed;
+            --nature-green: #2d5016;
+            --accent-vital: #4caf50;
+            --accent-warn: #d4af37;
             
             /* Typography */
             --font-display: 'DM Serif Display', serif;
@@ -145,6 +147,7 @@
             cursor: pointer;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             text-decoration: none;
+            display: inline-block;
         }
 
         .cta-header:hover {
@@ -280,8 +283,8 @@
             width: 100%;
             max-width: 500px;
             height: auto;
-            border-radius: 8px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+            border-radius: 4px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
         }
         
         /* Problem Section */
@@ -458,22 +461,21 @@
         }
         
         .credentials {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: var(--space-md);
-            max-width: 900px;
-            margin: var(--space-lg) auto 0;
+            display: flex;
+            justify-content: center;
+            gap: var(--space-lg);
+            flex-wrap: wrap;
+            margin-top: var(--space-lg);
         }
         
         .credential-badge {
-            padding: var(--space-md);
+            padding: var(--space-sm) var(--space-md);
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.3);
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 0.1em;
             font-weight: 500;
-            text-align: center;
         }
         
         /* Final CTA */
@@ -577,15 +579,6 @@
                 padding: var(--space-lg) var(--space-md);
             }
             
-            .hero-visual {
-                order: -1;
-                margin-bottom: var(--space-md);
-            }
-            
-            .hero-image {
-                max-width: 100%;
-            }
-            
             .problem-list {
                 grid-template-columns: 1fr;
             }
@@ -597,16 +590,10 @@
             .credibility {
                 flex-direction: column;
                 gap: var(--space-sm);
-                align-items: flex-start;
-            }
-            
-            .credentials {
-                grid-template-columns: 1fr;
             }
             
             .cta-buttons {
                 flex-direction: column;
-                width: 100%;
             }
             
             .cta-primary,
@@ -656,6 +643,8 @@
             <div class="logo">beò</div>
             <div class="nav-links">
                 <a href="mailto:info@beo.llc" class="cta-header" aria-label="Contact us via email">Contact</a>
+                <a href="https://x.com/bhibeo" target="_blank">@bhibeo</a>
+                <a href="/cdn-cgi/l/email-protection#81e8efe7eec1e3e4eeafedede2" class="cta-header">Contact</a>
             </div>
         </nav>
     </header>
@@ -666,7 +655,7 @@
                 <h1>Your phone is <span class="highlight">hunting</span> your attention. Fight back.</h1>
                 
                 <p class="subhead">
-                    AI-powered well-being that counteracts social media addiction through nature, financial incentives, and biometric validation.
+                    Evidence-based interventions that help you regain control of your attention through mindful breaks and nature connection.
                 </p>
                 
                 <div class="credibility">
@@ -676,6 +665,7 @@
                 </div>
                 
                 <a href="mailto:beta@beo.llc?subject=beò Beta Access Request" class="cta-primary" aria-label="Join beta waitlist via email">Join Beta Waitlist</a>
+                <a href="#beta" class="cta-primary">Join Beta Waitlist</a>
             </div>
             
             <div class="hero-visual">
@@ -689,7 +679,7 @@
                 
                 <p class="evidence">
                     Social media platforms spent billions engineering your attention. 
-                    They're not just addictive - they're systematically degrading human cognitive capabilities.
+                    They're not just addictive—they're systematically degrading human cognitive capabilities.
                 </p>
                 
                 <div class="problem-list">
@@ -728,20 +718,14 @@
                 <div class="feature">
                     <span class="feature-icon">🌿</span>
                     <h3>Nature Integration</h3>
-                    <p>Verified outdoor time through biometric validation. Get rewarded for disconnecting and reconnecting with the real world.</p>
+                    <p>Mindful outdoor breaks that restore attention and reduce anxiety. Replace doom scrolling with genuine restoration.</p>
                 </div>
                 
                 <div class="feature">
                     <span class="feature-icon">💰</span>
-                    <h3>Financial Incentives</h3>
-                    <p>Research-backed behavioral economics. Earn real rewards for breaking the scroll habit and building healthier patterns.</p>
-                </div>
                 
                 <div class="feature">
                     <span class="feature-icon">🔬</span>
-                    <h3>Biometric Validation</h3>
-                    <p>No cheating. Sophisticated AI verifies authentic nature engagement through multiple data points.</p>
-                </div>
             </div>
         </section>
         
@@ -776,7 +760,11 @@
             
             <div class="cta-buttons">
                 <a href="mailto:beta@beo.llc?subject=beò Beta Access Request" class="cta-primary" aria-label="Request beta access via email">
+                <a href="/cdn-cgi/l/email-protection#147d7a727b5476717b3a7878772b6761767e717760297671d7a63456716075345577777167673446716561716760" class="cta-primary">
                     Request Beta Access
+                </a>
+                <a href="https://x.com/bhibeo" class="cta-secondary" target="_blank">
+                    Follow Launch on X
                 </a>
             </div>
         </section>
@@ -789,7 +777,7 @@
         </p>
     </footer>
     
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Scroll animations
         const observerOptions = {
             threshold: 0.1,
@@ -806,11 +794,4 @@
         }, observerOptions);
         
         document.querySelectorAll('.problem-item, .feature').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'all 0.6s ease-out';
-            observer.observe(el);
-        });
-    </script>
-</body>
-</html>
+        
