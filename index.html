@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>beò | Reclaim Your Mind from Social Media</title>
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
-
-    <meta name="description" content="Evidence-based digital wellbeing app that helps you regain control through nature-based interventions and mindful breaks.">
+    <title>Beo | Reclaim Your Mind from Social Media</title>
+    <meta name="description" content="AI-powered well-being app that counteracts social media addiction through nature, financial incentives, and biometric validation. Built by a Fortune 500 CTO who studied the problem.">
     
     <!-- Fonts: Distinctive pairing -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -83,7 +80,7 @@
         header {
             position: sticky;
             top: 0;
-            background: rgba(250, 248, 245, 0.9);
+            background: rgba(245, 241, 237, 0.9);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--earth-mid);
             padding: var(--space-sm) var(--space-md);
@@ -112,55 +109,22 @@
             letter-spacing: -0.02em;
         }
         
-        .nav-links {
-            display: flex;
-            gap: var(--space-md);
-            align-items: center;
-        }
-        
-        .nav-links a {
-            color: var(--earth-dark);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        
-        .nav-links a:hover {
-            color: var(--nature-green);
-        }
-
-        .nav-links a:focus-visible {
-            outline: 2px solid var(--nature-green);
-            outline-offset: 2px;
-        }
-        
         .cta-header {
             padding: 0.75rem 2rem;
             background: var(--nature-green);
             color: var(--earth-light);
-            border: 2px solid var(--nature-green);
+            border: none;
             font-family: var(--font-body);
             font-weight: 500;
             font-size: 0.95rem;
             cursor: pointer;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            text-decoration: none;
-            display: inline-block;
+            border-radius: 2px;
         }
-
+        
         .cta-header:hover {
             background: var(--earth-dark);
-            border-color: var(--earth-dark);
             transform: translateY(-1px);
-        }
-
-        .cta-header:focus-visible {
-            outline: 2px solid var(--nature-green);
-            outline-offset: 2px;
-        }
-
-        .cta-header:active {
-            transform: translateY(0);
         }
         
         /* Hero Section */
@@ -255,34 +219,43 @@
         .cta-primary:hover::before {
             left: 0;
         }
-
+        
         .cta-primary:hover {
             border-color: var(--earth-dark);
-        }
-
-        .cta-primary:focus-visible {
-            outline: 2px solid var(--nature-green);
-            outline-offset: 2px;
-        }
-
-        .cta-primary:active::before {
-            left: 0;
         }
         
         .hero-visual {
             position: relative;
             animation: fadeInUp 0.8s ease-out 0.4s both;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
         
-        .hero-image {
-            width: 100%;
-            max-width: 500px;
-            height: auto;
-            border-radius: 4px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-md);
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid var(--earth-mid);
+            padding: var(--space-md);
+            border-radius: 2px;
+            backdrop-filter: blur(8px);
+        }
+        
+        .stat-card .number {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: var(--nature-green);
+            display: block;
+            margin-bottom: var(--space-xs);
+            line-height: 1;
+        }
+        
+        .stat-card .label {
+            font-size: 0.9rem;
+            color: var(--earth-mid);
+            font-weight: 400;
         }
         
         /* Problem Section */
@@ -327,6 +300,13 @@
             font-weight: 400;
         }
         
+        .problem-content .research {
+            font-size: 1.2rem;
+            color: var(--accent-vital);
+            margin-bottom: var(--space-sm);
+            font-weight: 300;
+        }
+        
         .problem-content .evidence {
             font-size: 1.1rem;
             margin-bottom: var(--space-md);
@@ -335,7 +315,7 @@
         
         .problem-list {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: var(--space-md);
             margin-top: var(--space-lg);
         }
@@ -417,18 +397,11 @@
             font-size: 1.8rem;
             margin-bottom: var(--space-sm);
             font-weight: 400;
-            transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
+        
         .feature p {
             font-size: 1.05rem;
             line-height: 1.7;
-            transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .feature:hover h3,
-        .feature:hover p {
-            color: var(--earth-light);
         }
         
         /* Authority Section */
@@ -519,15 +492,6 @@
             background: var(--earth-dark);
             color: var(--earth-light);
         }
-
-        .cta-secondary:focus-visible {
-            outline: 2px solid var(--nature-green);
-            outline-offset: 2px;
-        }
-
-        .cta-secondary:active {
-            transform: scale(0.98);
-        }
         
         /* Footer */
         footer {
@@ -551,25 +515,7 @@
         footer a:hover {
             opacity: 0.7;
         }
-
-        /* Skip to content link for accessibility */
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: var(--nature-green);
-            color: var(--earth-light);
-            padding: 0.75rem 1.5rem;
-            z-index: 1000;
-            text-decoration: none;
-            font-weight: 500;
-            transition: top 0.3s ease;
-        }
-
-        .skip-link:focus {
-            top: 0;
-        }
-
+        
         /* Responsive */
         @media (max-width: 768px) {
             .hero {
@@ -577,7 +523,7 @@
                 padding: var(--space-lg) var(--space-md);
             }
             
-            .problem-list {
+            .stats-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -599,79 +545,62 @@
                 width: 100%;
                 text-align: center;
             }
-            
-            .nav-links {
-                gap: var(--space-sm);
-            }
-            
-            .logo {
-                font-size: 1.5rem;
-            }
-
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-
-            .hero-content .subhead {
-                font-size: 1.1rem;
-                max-width: 100%;
-            }
-        }
-
-        /* Reduced motion for accessibility */
-        @media (prefers-reduced-motion: reduce) {
-            *,
-            *::before,
-            *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-
-            body::before {
-                animation: none;
-            }
         }
     </style>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
-        <nav aria-label="Main navigation">
+        <nav>
             <div class="logo">beò</div>
-            <div class="nav-links">
-                <a href="https://x.com/bhibeo" target="_blank" aria-label="Follow us on X">@bhibeo</a>
-                <a href="mailto:info@beo.llc" class="cta-header" aria-label="Contact us via email">Contact</a>
-            </div>
+            <button class="cta-header" onclick="scrollToCTA()">Join Beta</button>
         </nav>
     </header>
-
-    <main id="main-content">
+    
+    <main>
         <section class="hero">
             <div class="hero-content">
                 <h1>Your phone is <span class="highlight">hunting</span> your attention. Fight back.</h1>
                 
                 <p class="subhead">
-                    Evidence-based interventions that help you regain control of your attention through mindful breaks and nature connection.
+                    AI-powered well-being that counteracts social media addiction through nature, financial incentives, and biometric validation.
                 </p>
                 
                 <div class="credibility">
-                    <span>Fortune 500 Experience</span>
-                    <span>Research-Backed</span>
-                    <span>Tech Leadership</span>
+                    <span>Fortune 500 CTO</span>
+                    <span>MSc Research</span>
+                    <span>FBCS Fellow</span>
                 </div>
                 
-                <a href="mailto:beta@beo.llc?subject=beò Beta Access Request" class="cta-primary" aria-label="Join beta waitlist via email">Join Beta Waitlist</a>
+                <a href="#beta" class="cta-primary">Join Beta Waitlist</a>
             </div>
             
             <div class="hero-visual">
-                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=800&fit=crop" alt="Sunlight filtering through a peaceful forest canopy" class="hero-image" loading="lazy" onerror="this.style.background='linear-gradient(135deg, var(--nature-green) 0%, var(--earth-mid) 100%)'; this.style.minHeight='400px';">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="number">30</span>
+                        <span class="label">Years Building Digital Products</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="number">$23B</span>
+                        <span class="label">UK Gov Programmes Led</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="number">40%</span>
+                        <span class="label">Cost Reduction at Abcam</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="number">MSc</span>
+                        <span class="label">Tech's Cognitive Impact</span>
+                    </div>
+                </div>
             </div>
         </section>
         
         <section class="problem">
             <div class="problem-content">
-                <h2>We Built the Tech. Then We Studied What It Does to Human Brains.</h2>
+                <h2>I Spent 30 Years Building the Tech. Then I Studied What It Does to Human Brains.</h2>
+                
+                <p class="research">MSc Research, Business Psychology, University of Strathclyde</p>
                 
                 <p class="evidence">
                     Social media platforms spent billions engineering your attention. 
@@ -695,65 +624,57 @@
                         <h3>Willpower Isn't Enough</h3>
                         <p>You're not weak. You're human. Tech companies have multi-billion dollar teams working against you.</p>
                     </div>
-                    <div class="problem-item">
-                        <h3>Engineered Addiction</h3>
-                        <p>These platforms use the same psychological techniques as slot machines. They're designed to be irresistible.</p>
-                    </div>
-                    <div class="problem-item">
-                        <h3>Lost Time</h3>
-                        <p>The average person spends 2.5 hours daily on social media. That's 38 days per year of your life.</p>
-                    </div>
                 </div>
             </div>
         </section>
         
         <section class="solution">
-            <h2>beò: The Counter-Weapon</h2>
+            <h2>Beo: The Counter-Weapon</h2>
             
             <div class="features">
                 <div class="feature">
                     <span class="feature-icon">🌿</span>
                     <h3>Nature Integration</h3>
-                    <p>Mindful outdoor breaks that restore attention and reduce anxiety. Replace doom scrolling with genuine restoration.</p>
+                    <p>Verified outdoor time through biometric validation. Get rewarded for disconnecting and reconnecting with the real world.</p>
                 </div>
-
+                
                 <div class="feature">
                     <span class="feature-icon">💰</span>
                     <h3>Financial Incentives</h3>
-                    <p>Put your money where your mind is. Real stakes create real motivation to break free from addictive patterns.</p>
+                    <p>Research-backed behavioral economics. Earn real rewards for breaking the scroll habit and building healthier patterns.</p>
                 </div>
-
+                
                 <div class="feature">
                     <span class="feature-icon">🔬</span>
-                    <h3>Research-Backed Methods</h3>
-                    <p>Built on behavioral psychology and validated interventions. Not another app—a scientifically-designed counter-weapon.</p>
+                    <h3>Biometric Validation</h3>
+                    <p>No cheating. Sophisticated AI verifies authentic nature engagement through multiple data points.</p>
                 </div>
             </div>
         </section>
         
         <section class="authority">
             <div class="authority-content">
-                <blockquote class="quote" cite="https://beo.llc">
-                    "We've led digital transformations for Fortune 500 companies.
-                    Now we're using that expertise to help you reclaim what tech steals:
+                <blockquote class="quote">
+                    "I led digital transformations saving UK taxpayers £2.7B annually. 
+                    Now I'm using that same rigor to help you reclaim what tech steals: 
                     time, attention, cognitive capacity."
                 </blockquote>
                 
                 <p class="attribution">
-                    The beò Team
+                    Julie Hendry — Founder, Beo
                 </p>
                 
                 <div class="credentials">
-                    <div class="credential-badge">20+ Years Tech Industry</div>
-                    <div class="credential-badge">Behavioral Psychology</div>
-                    <div class="credential-badge">Peer-Reviewed Research</div>
-                    <div class="credential-badge">Product Development</div>
+                    <div class="credential-badge">Fellow, British Computer Society</div>
+                    <div class="credential-badge">Former CTO, Fortune 500</div>
+                    <div class="credential-badge">MSc, Business Psychology</div>
+                    <div class="credential-badge">HMRC £23B Programme</div>
                 </div>
             </div>
         </section>
         
         <section class="final-cta" id="beta">
-            <h2>Launch: Spring 2026</h2>
+            <h2>Launch: 3 Weeks</h2>
             
             <p>
                 Be among the first to fight back. Beta access includes early adopter pricing 
@@ -761,20 +682,34 @@
             </p>
             
             <div class="cta-buttons">
-                <a href="mailto:beta@beo.llc?subject=beò Beta Access Request" class="cta-primary" aria-label="Request beta access via email">Request Beta Access</a>
-                <a href="https://x.com/bhibeo" class="cta-secondary" target="_blank" aria-label="Follow launch updates on X">Follow Launch on X</a>
+                <a href="mailto:juliemehendry@gmail.com?subject=Beo Beta Access Request" class="cta-primary">
+                    Request Beta Access
+                </a>
+                <a href="https://x.com/bhibeo" class="cta-secondary" target="_blank">
+                    Follow Launch on X
+                </a>
             </div>
         </section>
     </main>
     
     <footer>
         <p>
-            © 2026 beò. Launching Spring 2026. |
-            <a href="mailto:info@beo.llc">info@beo.llc</a>
+            Built by <a href="https://www.juliehendry.com" target="_blank">Julie Hendry</a> | 
+            <a href="https://www.linkedin.com/in/juliehendry" target="_blank">LinkedIn</a> | 
+            <a href="https://x.com/bhibeo" target="_blank">@bhibeo</a>
+        </p>
+        <p style="margin-top: 1rem; opacity: 0.5;">
+            © 2025 Beo. Launching soon.
         </p>
     </footer>
     
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
+        function scrollToCTA() {
+            document.getElementById('beta').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+        
         // Scroll animations
         const observerOptions = {
             threshold: 0.1,
@@ -790,5 +725,12 @@
             });
         }, observerOptions);
         
-        document.querySelectorAll('.problem-item, .feature').forEach(el => {
-        
+        document.querySelectorAll('.stat-card, .problem-item, .feature').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
