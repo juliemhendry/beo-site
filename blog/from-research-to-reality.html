@@ -14,30 +14,8 @@
         gtag('js', new Date());
         gtag('config', 'G-9KPL21EX4E');
     </script>
+    <link rel="stylesheet" href="../styles.css">
     <style>
-        :root {
-            --primary: #3D6B4A;
-            --primary-dark: #2D5A3D;
-            --background: #F5F5F3;
-            --text-dark: #1A1A1A;
-            --text: #4A4A4A;
-            --text-light: #7A7A7A;
-            --text-muted: #9A9A9A;
-            --white: #FFFFFF;
-            --border: #E0E0E0;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--background); color: var(--text); line-height: 1.6; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-
-        header { padding: 24px 0; background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
-        .header-content { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 28px; font-weight: 600; text-decoration: none; color: var(--primary); }
-        nav { display: flex; gap: 32px; }
-        nav a { color: var(--text); text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s; }
-        nav a:hover { color: var(--primary); }
-
         .post-header { padding: 80px 0 40px; background: var(--white); border-bottom: 1px solid var(--border); }
         .post-header h1 { font-size: 42px; font-weight: 500; color: var(--text-dark); margin-bottom: 16px; max-width: 800px; margin-left: auto; margin-right: auto; }
         .post-meta { font-size: 14px; color: var(--text-muted); max-width: 800px; margin: 0 auto; }
@@ -77,14 +55,6 @@
         .cta p { font-size: 18px; margin-bottom: 24px; color: var(--white); opacity: 0.9; }
         .cta a { display: inline-block; padding: 16px 32px; background: var(--white); color: var(--primary); text-decoration: none; border-radius: 12px; font-size: 16px; font-weight: 600; transition: transform 0.2s; }
         .cta a:hover { transform: translateY(-2px); }
-
-        footer { padding: 48px 0; text-align: center; background: var(--white); border-top: 1px solid var(--border); }
-        footer p { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
-        footer .enterprise { font-size: 13px; color: var(--text); margin: 16px 0; }
-        footer .enterprise a { color: var(--primary); text-decoration: none; font-weight: 600; }
-        footer nav { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-top: 16px; }
-        footer nav a { font-size: 13px; color: var(--text); text-decoration: none; transition: color 0.2s; }
-        footer nav a:hover { color: var(--primary); }
 
         @media (max-width: 768px) {
             .post-header h1 { font-size: 32px; }
