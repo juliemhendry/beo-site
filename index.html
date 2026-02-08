@@ -18,6 +18,16 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="beó – Your attention is being hunted. Technology should serve you.">
     <meta name="twitter:description" content="Feel in control of your digital life. Evidence-based microhabits. Join our research study.">
+    <!-- Redirect to ADHD page for community/research refs -->
+    <script>
+        (function() {
+            var params = new URLSearchParams(window.location.search);
+            var ref = params.get('ref');
+            if (ref === 'community' || ref === 'research') {
+                window.location.replace('community.html' + window.location.search);
+            }
+        })();
+    </script>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9KPL21EX4E"></script>
     <script>
