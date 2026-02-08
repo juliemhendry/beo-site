@@ -1,65 +1,332 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Use | beò</title>
-    <meta name="description" content="Terms of Use for beò LLC">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Terms of Service – beó</title>
+    <meta name="description" content="Terms of Service for beó digital wellbeing research">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9KPL21EX4E"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9KPL21EX4E');
+    </script>
     <style>
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --forest: #2d5a3d; --cream: #f8f6f0; --charcoal: #2c2c2c; --text-secondary: #555; }
-        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background-color: var(--cream); color: var(--charcoal); line-height: 1.7; font-size: 16px; }
-        header { padding: 1.5rem 2rem; max-width: 800px; margin: 0 auto; }
-        .logo { font-size: 1.5rem; font-weight: 600; color: var(--forest); text-decoration: none; }
-        main { max-width: 800px; margin: 0 auto; padding: 2rem; }
-        h1 { font-size: 2rem; margin-bottom: 0.5rem; color: var(--charcoal); }
-        .last-updated { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 2rem; }
-        h2 { font-size: 1.25rem; margin-top: 2rem; margin-bottom: 0.75rem; color: var(--charcoal); }
-        p { margin-bottom: 1rem; color: var(--text-secondary); }
-        a { color: var(--forest); }
-        footer { padding: 2rem; text-align: center; color: #777; font-size: 0.85rem; max-width: 800px; margin: 0 auto; }
-        footer a { color: var(--forest); text-decoration: none; }
+        :root {
+            --primary: #3D6B4A;
+            --background: #F5F5F3;
+            --text-dark: #1A1A1A;
+            --text: #4A4A4A;
+            --text-light: #7A7A7A;
+            --white: #FFFFFF;
+            --border: #E0E0E0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--background); color: var(--text); line-height: 1.7; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+        header { padding: 24px 0; background: var(--white); border-bottom: 1px solid var(--border); }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 28px; font-weight: 600; text-decoration: none; color: var(--primary); }
+        nav { display: flex; gap: 24px; align-items: center; }
+        nav a { color: var(--text); text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s; }
+        nav a:hover { color: var(--primary); }
+        nav .icon-link { display: inline-flex; align-items: center; padding: 4px; }
+        nav .icon-link svg { display: block; }
+        main { padding: 60px 0; }
+        h1 { font-size: 48px; font-weight: 500; color: var(--text-dark); margin-bottom: 16px; }
+        .last-updated { font-size: 14px; color: var(--text-light); margin-bottom: 48px; }
+        h2 { font-size: 28px; font-weight: 500; color: var(--text-dark); margin: 48px 0 24px; }
+        h3 { font-size: 20px; font-weight: 600; color: var(--primary); margin: 32px 0 16px; }
+        p { font-size: 16px; line-height: 1.8; margin-bottom: 16px; }
+        ul { margin: 16px 0 16px 32px; }
+        li { margin-bottom: 12px; line-height: 1.7; }
+        strong { color: var(--text-dark); font-weight: 600; }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .notice { background: #f0f7f3; padding: 24px; border-radius: 12px; border-left: 4px solid var(--primary); margin: 32px 0; }
+        footer { padding: 48px 0; text-align: center; background: var(--white); border-top: 1px solid var(--border); margin-top: 60px; }
+        footer p { font-size: 14px; color: var(--text-light); }
     </style>
 </head>
 <body>
     <header>
-        <a href="/" class="logo">beò</a>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">beó</a>
+                <nav>
+                    <a href="blog.html">lab notes</a>
+                    <a href="team.html">about</a>
+                    <a href="resources.html">resources</a>
+                    <a href="mailto:info@beo.llc" title="Contact us" class="icon-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></a>
+                </nav>
+            </div>
+        </div>
     </header>
+
     <main>
-        <h1>Terms of Use</h1>
-        <p class="last-updated">Last updated: January 2026</p>
+        <div class="container">
+            <h1>Terms of Service</h1>
+            <p class="last-updated">Last updated: 3 February 2026</p>
 
-        <p>Welcome to beo.llc, operated by beò LLC ("we", "us", or "our"). By accessing or using our website, you agree to be bound by these Terms of Use.</p>
+            <p>Welcome to beó. These Terms of Service ("Terms") govern your access to and use of beo.llc (the "Website") and the beó research application ("App"), operated by beó LLC ("we", "us", or "our").</p>
 
-        <h2>Use of Website</h2>
-        <p>This website is provided for informational purposes only. You may use the website for lawful purposes and in accordance with these Terms.</p>
+            <p>By accessing the Website or participating in our research, you agree to be bound by these Terms. If you do not agree, please do not use our services.</p>
 
-        <h2>Intellectual Property</h2>
-        <p>All content on this website, including text, graphics, logos, and images, is the property of beò LLC and is protected by applicable intellectual property laws. You may not reproduce, distribute, or create derivative works without our prior written consent.</p>
+            <h2>1. Nature of Service</h2>
 
-        <h2>Beta Programme</h2>
-        <p>By requesting access to our beta programme, you understand that you will be using pre-release software that may contain bugs or errors. Beta features are provided "as is" without warranty of any kind.</p>
+            <h3>1.1 Research Study</h3>
+            <p>beó is primarily a digital wellbeing research study, not a commercial product. The App is provided free of charge for research purposes. We make no guarantees about:</p>
+            <ul>
+                <li>Availability, reliability, or uptime</li>
+                <li>Specific outcomes or improvements to your digital wellbeing</li>
+                <li>Continued operation after the research period ends</li>
+            </ul>
 
-        <h2>Disclaimer</h2>
-        <p>The information on this website is provided for general informational purposes only. beò is a digital wellbeing tool and is not intended to diagnose, treat, cure, or prevent any medical or mental health condition. Always seek the advice of a qualified healthcare provider with any questions regarding a medical or mental health condition.</p>
+            <h3>1.2 Voluntary Participation</h3>
+            <p>Participation in our research is entirely voluntary. You may:</p>
+            <ul>
+                <li>Choose whether to sign up</li>
+                <li>Stop participating at any time without penalty</li>
+                <li>Uninstall the App at any time</li>
+            </ul>
 
-        <h2>Limitation of Liability</h2>
-        <p>To the fullest extent permitted by law, beò LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or relating to your use of the website or services.</p>
+            <h2>2. Eligibility</h2>
 
-        <h2>Changes to Terms</h2>
-        <p>We reserve the right to modify these Terms at any time. Changes will be effective immediately upon posting to the website. Your continued use of the website after any changes constitutes acceptance of the new Terms.</p>
+            <p>You must be:</p>
+            <ul>
+                <li><strong>18 years or older</strong> to participate in research</li>
+                <li>Legally capable of entering into binding contracts</li>
+                <li>Not prohibited from using our services under applicable law</li>
+            </ul>
 
-        <h2>Governing Law</h2>
-        <p>These Terms shall be governed by and construed in accordance with the laws of the State of Wyoming, United States, without regard to its conflict of law provisions.</p>
+            <p>By using our services, you represent and warrant that you meet these eligibility requirements.</p>
 
-        <h2>Contact Us</h2>
-        <p>If you have any questions about these Terms, please contact us at <a href="mailto:info@beo.llc">info@beo.llc</a>.</p>
+            <h2>3. Research Participation</h2>
+
+            <h3>3.1 Informed Consent</h3>
+            <p>Before participating, you will be provided with information about:</p>
+            <ul>
+                <li>What data we collect (anonymous research data only)</li>
+                <li>How we use the data (research analysis and publication)</li>
+                <li>Your rights (voluntary participation, can withdraw anytime)</li>
+                <li>Research ethics (BPS Code of Human Research Ethics)</li>
+            </ul>
+
+            <p>Your continued use of the App after reviewing this information constitutes informed consent to participate.</p>
+
+            <h3>3.2 Data Collection</h3>
+            <p>As detailed in our <a href="privacy.html">Privacy Policy</a>, we collect:</p>
+            <ul>
+                <li>Anonymous BSMAS scores</li>
+                <li>Anonymised perception gap data</li>
+                <li>Anonymous intervention completion patterns</li>
+            </ul>
+
+            <p>We do NOT collect personally identifiable information. See Privacy Policy for full details.</p>
+
+            <h3>3.3 Withdrawal</h3>
+            <p>You may stop participating at any time by:</p>
+            <ul>
+                <li>Uninstalling the App</li>
+                <li>Emailing lab@beo.llc to request removal from email list</li>
+            </ul>
+
+            <p>Because data is collected anonymously, we cannot delete specific data after collection (we cannot identify which data is yours).</p>
+
+            <h2>4. Use of Website and App</h2>
+
+            <h3>4.1 Permitted Use</h3>
+            <p>You may use our services for:</p>
+            <ul>
+                <li>Personal, non-commercial purposes</li>
+                <li>Participating in our research study</li>
+                <li>Accessing evidence-based digital wellbeing interventions</li>
+            </ul>
+
+            <h3>4.2 Prohibited Use</h3>
+            <p>You may NOT:</p>
+            <ul>
+                <li>Reverse engineer, decompile, or disassemble the App</li>
+                <li>Use the service for any illegal purpose</li>
+                <li>Attempt to access data belonging to other users</li>
+                <li>Interfere with or disrupt the service</li>
+                <li>Use automated tools (bots, scrapers) without permission</li>
+                <li>Misrepresent your eligibility or provide false information</li>
+            </ul>
+
+            <h2>5. Intellectual Property</h2>
+
+            <h3>5.1 Our Content</h3>
+            <p>All content on the Website and App, including:</p>
+            <ul>
+                <li>Text, graphics, logos, and design</li>
+                <li>Intervention content and methodology</li>
+                <li>Software and code</li>
+                <li>Research findings and analysis</li>
+            </ul>
+
+            <p>...is the property of beó LLC and protected by copyright, trademark, and other intellectual property laws.</p>
+
+            <h3>5.2 License</h3>
+            <p>We grant you a limited, non-exclusive, non-transferable license to access and use our services for personal, non-commercial purposes. This license automatically terminates if you violate these Terms.</p>
+
+            <h3>5.3 Research Findings</h3>
+            <p>Research findings derived from anonymous data may be published in academic journals or shared publicly. Such publications will not identify individual participants.</p>
+
+            <h2>6. Disclaimers</h2>
+
+            <h3>6.1 Not Medical Advice</h3>
+            <div class="notice">
+                <p><strong>Important:</strong> beó is a digital wellbeing research tool, NOT a medical device or treatment. It is not intended to diagnose, treat, cure, or prevent any medical or mental health condition.</p>
+            </div>
+
+            <p>If you are experiencing mental health difficulties, please consult a qualified healthcare professional. Do not rely on beó as a substitute for professional medical advice.</p>
+
+            <h3>6.2 No Warranties</h3>
+            <p>The Website and App are provided "AS IS" and "AS AVAILABLE" without warranties of any kind, either express or implied, including:</p>
+            <ul>
+                <li>Merchantability or fitness for a particular purpose</li>
+                <li>Accuracy, reliability, or completeness of content</li>
+                <li>Uninterrupted or error-free operation</li>
+                <li>Results or outcomes from using the service</li>
+            </ul>
+
+            <h3>6.3 Research Nature</h3>
+            <p>Because this is a research study:</p>
+            <ul>
+                <li>The App may contain bugs or errors</li>
+                <li>Features may change without notice</li>
+                <li>The service may be discontinued after research concludes</li>
+                <li>We make no promises about effectiveness</li>
+            </ul>
+
+            <h2>7. Limitation of Liability</h2>
+
+            <p>To the fullest extent permitted by law, beó LLC shall NOT be liable for any:</p>
+            <ul>
+                <li>Indirect, incidental, special, consequential, or punitive damages</li>
+                <li>Loss of profits, revenue, data, or use</li>
+                <li>Damages arising from your use or inability to use our services</li>
+                <li>Damages relating to mental health or wellbeing outcomes</li>
+            </ul>
+
+            <p>Our total liability to you for all claims shall not exceed £100 (GBP) or $100 (USD).</p>
+
+            <h3>7.1 Exceptions</h3>
+            <p>Nothing in these Terms excludes or limits liability for:</p>
+            <ul>
+                <li>Death or personal injury caused by our negligence</li>
+                <li>Fraud or fraudulent misrepresentation</li>
+                <li>Any liability that cannot be excluded or limited under applicable law</li>
+            </ul>
+
+            <h2>8. Indemnification</h2>
+
+            <p>You agree to indemnify, defend, and hold harmless beó LLC, its officers, directors, employees, and agents from any claims, liabilities, damages, losses, or expenses (including legal fees) arising from:</p>
+            <ul>
+                <li>Your use of our services</li>
+                <li>Your violation of these Terms</li>
+                <li>Your violation of any rights of another party</li>
+            </ul>
+
+            <h2>9. Modifications</h2>
+
+            <h3>9.1 Changes to Terms</h3>
+            <p>We may modify these Terms at any time. Changes will be effective immediately upon posting to the Website. We will update the "Last updated" date.</p>
+
+            <p>Your continued use of our services after changes constitutes acceptance of the modified Terms.</p>
+
+            <h3>9.2 Changes to Service</h3>
+            <p>We reserve the right to:</p>
+            <ul>
+                <li>Modify or discontinue any part of the service</li>
+                <li>Change features, interventions, or functionality</li>
+                <li>Suspend or terminate the service</li>
+            </ul>
+
+            <p>We will make reasonable efforts to notify active users of significant changes.</p>
+
+            <h2>10. Termination</h2>
+
+            <h3>10.1 By You</h3>
+            <p>You may stop using our services at any time by:</p>
+            <ul>
+                <li>Uninstalling the App</li>
+                <li>Unsubscribing from emails</li>
+                <li>Simply ceasing to access the Website</li>
+            </ul>
+
+            <h3>10.2 By Us</h3>
+            <p>We may suspend or terminate your access if:</p>
+            <ul>
+                <li>You violate these Terms</li>
+                <li>You provide false information</li>
+                <li>We believe your use harms us or others</li>
+                <li>Required by law</li>
+            </ul>
+
+            <h3>10.3 Effect of Termination</h3>
+            <p>Upon termination:</p>
+            <ul>
+                <li>Your license to use our services ends immediately</li>
+                <li>Anonymous research data already collected remains with us (for research purposes)</li>
+                <li>You should delete the App from your device</li>
+            </ul>
+
+            <h2>11. Dispute Resolution</h2>
+
+            <h3>11.1 Governing Law</h3>
+            <p>These Terms are governed by the laws of the State of Wyoming, United States, without regard to conflict of law principles.</p>
+
+            <p>For users in the UK or EU, you also retain rights under local consumer protection laws.</p>
+
+            <h3>11.2 Jurisdiction</h3>
+            <p>Any disputes shall be resolved in the courts of Wyoming, USA. However, you may also bring claims in the courts of your country of residence if permitted by local law.</p>
+
+            <h3>11.3 Informal Resolution</h3>
+            <p>Before filing any formal claim, please contact us at info@beo.llc to attempt informal resolution. We're reasonable people who want to make things right.</p>
+
+            <h2>12. General Provisions</h2>
+
+            <h3>12.1 Entire Agreement</h3>
+            <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and beó LLC regarding our services.</p>
+
+            <h3>12.2 Severability</h3>
+            <p>If any provision of these Terms is found to be unenforceable, the remaining provisions will remain in full effect.</p>
+
+            <h3>12.3 Waiver</h3>
+            <p>Our failure to enforce any right or provision does not constitute a waiver of that right or provision.</p>
+
+            <h3>12.4 Assignment</h3>
+            <p>You may not assign these Terms without our written consent. We may assign our rights to any affiliate or successor.</p>
+
+            <h3>12.5 Third Party Rights</h3>
+            <p>These Terms do not confer any rights to third parties.</p>
+
+            <h2>13. Contact Us</h2>
+
+            <p>Questions about these Terms?</p>
+            <ul>
+                <li><strong>General enquiries:</strong> <a href="mailto:info@beo.llc">info@beo.llc</a></li>
+                <li><strong>Research questions:</strong> <a href="mailto:lab@beo.llc">lab@beo.llc</a></li>
+                <li><strong>Legal questions:</strong> <a href="mailto:legal@beo.llc">legal@beo.llc</a></li>
+            </ul>
+
+            <p><strong>beó LLC</strong><br>
+            Wyoming, United States</p>
+
+            <div class="notice">
+                <p><strong>Summary:</strong> You're participating in research (voluntary, can quit anytime), it's provided "as is" for free, we're not a medical device, we collect anonymous data only, and we're not liable if it doesn't work for you. Standard stuff, but spelled out clearly.</p>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>© 2026 beò LLC | <a href="/">Home</a> | <a href="privacy.html">Privacy Policy</a></p>
+        <div class="container">
+            <p>&copy; 2026 beó | <a href="index.html">Home</a> | <a href="privacy.html">Privacy</a></p>
+        </div>
     </footer>
 </body>
 </html>
