@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why beó – beó Lab Notes</title>
+    <meta name="description" content="Why I'm building beó: a personal reflection on technology, mental health, and the search for something that actually works.">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9KPL21EX4E"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9KPL21EX4E');
+    </script>
+    <style>
+        :root { --primary: #3D6B4A; --primary-dark: #2D5A3D; --background: #F5F5F3; --text-dark: #1A1A1A; --text: #4A4A4A; --text-light: #7A7A7A; --text-muted: #9A9A9A; --white: #FFFFFF; --border: #E0E0E0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--background); color: var(--text); line-height: 1.8; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        header { padding: 24px 0; background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 28px; font-weight: 600; text-decoration: none; color: var(--primary); }
+        nav { display: flex; gap: 32px; }
+        nav a { color: var(--text); text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s; }
+        nav a:hover { color: var(--primary); }
+        .post-header { padding: 80px 0 40px; background: var(--white); border-bottom: 1px solid var(--border); }
+        .post-header h1 { font-size: 44px; font-weight: 600; color: var(--text-dark); max-width: 700px; margin: 0 auto 16px; text-align: center; line-height: 1.2; }
+        .post-meta { font-size: 14px; color: var(--text-muted); text-align: center; }
+        .post-author { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 20px; }
+        .author-photo { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
+        .author-info { font-size: 14px; text-align: left; }
+        .author-name { color: var(--text-dark); font-weight: 600; }
+        .author-title { color: var(--text-muted); }
+        article { max-width: 700px; margin: 0 auto; padding: 60px 24px 100px; }
+        article p { font-size: 18px; margin-bottom: 24px; line-height: 1.8; }
+        article h2 { font-size: 28px; font-weight: 600; color: var(--text-dark); margin: 48px 0 24px; }
+        article strong { color: var(--text-dark); }
+        .highlight { background: #f0f7f3; padding: 24px 32px; border-radius: 12px; border-left: 4px solid var(--primary); margin: 32px 0; }
+        .highlight p { margin-bottom: 0; }
+        .cta { background: var(--primary); color: var(--white); padding: 40px; border-radius: 12px; margin: 48px 0; text-align: center; }
+        .cta h3 { color: white; margin-bottom: 12px; font-size: 24px; }
+        .cta p { color: rgba(255,255,255,0.9); margin-bottom: 20px; }
+        .cta a { display: inline-block; background: var(--white); color: var(--primary); padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+        footer { padding: 48px 0; text-align: center; background: var(--white); border-top: 1px solid var(--border); }
+        footer p { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+        footer .enterprise { font-size: 13px; color: var(--text); margin: 8px 0; }
+        footer .enterprise a { color: var(--primary); text-decoration: none; font-weight: 600; }
+        footer nav { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-top: 16px; }
+        footer nav a { font-size: 13px; color: var(--text); text-decoration: none; }
+        @media (max-width: 768px) {
+            .post-header h1 { font-size: 32px; }
+            article p { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">beó</a>
+                <nav>
+                    <a href="../blog.html">lab notes</a>
+                    <a href="../team.html">about</a>
+                    <a href="../resources.html">resources</a>
+                    <a href="mailto:info@beo.llc" title="Contact us">✉️</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="post-header">
+        <div class="container">
+            <p style="margin-bottom: 24px;"><a href="../blog.html" style="color: var(--text-muted); text-decoration: none; font-size: 14px;">← Back to Lab Notes</a></p>
+            <h1>Why beó</h1>
+            <p class="post-meta">5 January 2026</p>
+            <a href="../blog.html" class="post-author" style="text-decoration: none;" title="View all posts">
+                <img src="../mark-photo.png" alt="Mark Andrew Pope" class="author-photo">
+                <div class="author-info">
+                    <div class="author-name">Mark Andrew Pope</div>
+                    <div class="author-title">CEO</div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <article>
+        <p>I'm 60. I've watched technology go from something you sought out to something you can't escape. Screens everywhere. Everyone staring at them. Everyone complaining about staring at them.</p>
+
+        <p>I've also spent most of my life managing a brain that doesn't work the way it's supposed to. That's given me a lot of time to think about patterns -mine and everyone else's.</p>
+
+        <h2>What bothers me</h2>
+
+        <p>Everyone says the same thing. "I'm on my phone too much." "I can't stop scrolling." "I feel addicted."</p>
+
+        <p>Fine. But here's what nobody talks about: <strong>we've killed anticipation.</strong></p>
+
+        <p>Waiting for a film -months. A new album -weeks. A letter -days. Something you ordered -who knows.</p>
+
+        <p>Now? Instant. Everything instant. Want, have. Want, have. The gap collapsed to nothing.</p>
+
+        <p>We haven't reckoned with what that's done to us. We've optimised away something human and nobody's asking what we lost.</p>
+
+        <h2>Julie</h2>
+
+        <p>Met her online twenty years ago. We've argued about technology, psychology, how brains work, ever since.</p>
+
+        <p>She did an MSc, found that people could actually report their social media use fairly accurately - but the "addiction" questionnaires researchers use? They don't predict real behaviour at all. The framework is broken, not the people. That landed with me.</p>
+
+        <h2>Why this</h2>
+
+        <p>Every digital wellbeing app starts from shame. Scary numbers. Lockouts. Treating you like you can't be trusted with your own phone.</p>
+
+        <p>Doesn't work. Never has. External control without understanding just makes people resentful.</p>
+
+        <p>So: what if you just told people the truth? Here's what you actually do. Here's the gap. Here's why. Now you decide what to do about it.</p>
+
+        <p>If it works, people get control back. Control of their ideas. Their breath. Time away from the constant nattering of the machine. You can hack your happiness by smelling a flower -doesn't cost anything, doesn't need an app telling you to do it. But first you have to notice you've been staring at a screen for two hours.</p>
+
+        <p>Julie has the research credentials. I have decades of managing a difficult brain and watching people lie to themselves about their habits. We'll see if it helps anyone.</p>
+
+        <div class="cta">
+            <h3>Join us</h3>
+            <p>February 2026. If you're curious -not ready to be lectured, just want to see clearly -sign up.</p>
+            <a href="../index.html#top">Sign up for the study</a>
+        </div>
+    </article>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 beó LLC</p>
+            <p class="enterprise">Academic & research collaboration: <a href="mailto:lab@beo.llc">lab@beo.llc</a></p>
+            <p class="enterprise">Enterprise & partnerships: <a href="mailto:info@beo.llc">info@beo.llc</a></p>
+            <nav>
+                <a href="../privacy.html">Privacy</a>
+                <a href="../terms.html">Terms</a>
+                <a href="../blog.html">Lab Notes</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

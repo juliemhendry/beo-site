@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>beó – Built by people with ADHD and ASD. For brains like ours.</title>
+    <meta name="description" content="Finally, an app that works WITH your brain, not against it. Built by founders with ADHD and ASD who understand the hyperfocus-doom-scroll cycle. No shame. No guilt. Just tools that actually help.">
+    <meta name="keywords" content="ADHD phone addiction, ASD screen time, neurodivergent digital wellbeing, ADHD doom scrolling, autism phone use, neurodiversity app">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="beó – Built by people with ADHD and ASD">
+    <meta property="og:description" content="Finally, an app that works WITH your brain. No shame, no scary numbers - just tools that actually help neurodivergent people feel in control.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://beo.llc/neurodivergent">
+    <meta property="og:image" content="https://beo.llc/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="beó – Built by people with ADHD and ASD">
+    <meta name="twitter:description" content="Finally, an app that works WITH your brain. No shame, no scary numbers.">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9KPL21EX4E"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9KPL21EX4E');
+    </script>
+    <style>
+        :root { --primary: #3D6B4A; --primary-dark: #2D5A3D; --background: #F5F5F3; --text-dark: #1A1A1A; --text: #4A4A4A; --text-light: #7A7A7A; --text-muted: #9A9A9A; --white: #FFFFFF; --border: #E0E0E0; --accent: #6B5B95; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--background); color: var(--text); line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        header { padding: 24px 0; background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 28px; font-weight: 600; text-decoration: none; color: var(--primary); }
+        nav { display: flex; gap: 24px; align-items: center; }
+        nav a { color: var(--text); text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s; }
+        nav a:hover { color: var(--primary); }
+        nav .icon-link { display: inline-flex; align-items: center; padding: 4px; }
+        nav .icon-link svg { display: block; }
+        .hero { padding: 80px 0 60px; text-align: center; }
+        .hero h1 { font-size: 48px; font-weight: 500; color: var(--text-dark); margin-bottom: 24px; line-height: 1.2; }
+        .hero h1 strong { color: var(--primary); font-weight: 600; }
+        .hero p.subtitle { font-size: 20px; color: var(--text-light); max-width: 650px; margin: 0 auto 32px; line-height: 1.5; }
+        .built-by { background: #f0f7f3; padding: 16px 24px; border-radius: 12px; display: inline-block; margin-bottom: 40px; }
+        .built-by p { font-size: 15px; color: var(--primary); font-weight: 500; margin: 0; }
+        .signup-form { max-width: 480px; margin: 0 auto; background: var(--white); padding: 32px; border-radius: 16px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .signup-form h3 { font-size: 20px; font-weight: 600; color: var(--text-dark); margin-bottom: 16px; }
+        .signup-form input, .signup-form select { width: 100%; padding: 14px 16px; border: 2px solid var(--border); border-radius: 12px; font-size: 16px; margin-bottom: 16px; background: var(--white); color: var(--text); }
+        .signup-form input:focus, .signup-form select:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(61, 107, 74, 0.2); }
+        .signup-form button:focus { outline: none; box-shadow: 0 0 0 3px rgba(61, 107, 74, 0.4); }
+        .signup-form button { width: 100%; padding: 16px; background: var(--primary); color: var(--white); border: none; border-radius: 12px; font-size: 16px; font-weight: 600; cursor: pointer; }
+        .signup-form button:hover { background: var(--primary-dark); }
+        .signup-form .privacy-note { font-size: 12px; color: var(--text-muted); margin-top: 12px; text-align: center; line-height: 1.5; }
+        .signup-form .privacy-note a { color: var(--primary); }
+
+        .understanding { padding: 80px 0; background: var(--white); }
+        .understanding h2 { text-align: center; font-size: 36px; font-weight: 500; color: var(--text-dark); margin-bottom: 48px; }
+        .understanding-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; max-width: 1000px; margin: 0 auto; }
+        .understanding-card { padding: 32px; background: var(--background); border-radius: 16px; }
+        .understanding-card .emoji { font-size: 36px; margin-bottom: 16px; }
+        .understanding-card h3 { font-size: 18px; font-weight: 600; color: var(--text-dark); margin-bottom: 12px; }
+        .understanding-card p { font-size: 15px; color: var(--text); line-height: 1.7; }
+        .understanding-card .subtext { font-size: 13px; color: var(--text-muted); margin-top: 12px; font-style: italic; }
+
+        .different { padding: 80px 0; }
+        .different h2 { text-align: center; font-size: 36px; font-weight: 500; color: var(--text-dark); margin-bottom: 24px; }
+        .different .intro { text-align: center; font-size: 18px; color: var(--text-light); max-width: 700px; margin: 0 auto 48px; }
+        .comparison { max-width: 800px; margin: 0 auto; }
+        .comparison-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px; }
+        .comparison-item { padding: 24px; border-radius: 12px; }
+        .comparison-item.old { background: #fff5f5; border-left: 4px solid #E57373; }
+        .comparison-item.new { background: #f0f7f3; border-left: 4px solid var(--primary); }
+        .comparison-item h4 { font-size: 14px; font-weight: 600; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .comparison-item p { font-size: 15px; color: var(--text-dark); line-height: 1.6; }
+        @media (max-width: 600px) {
+            .comparison-row { grid-template-columns: 1fr; }
+        }
+
+        .notifications { padding: 80px 0; background: var(--white); }
+        .notifications h2 { text-align: center; font-size: 36px; font-weight: 500; color: var(--text-dark); margin-bottom: 24px; }
+        .notifications .intro { text-align: center; font-size: 18px; color: var(--text-light); max-width: 700px; margin: 0 auto 48px; }
+        .notification-box { max-width: 600px; margin: 0 auto; background: var(--background); padding: 32px; border-radius: 16px; }
+        .notification-box h3 { font-size: 18px; font-weight: 600; color: var(--primary); margin-bottom: 16px; }
+        .notification-box ul { list-style: none; }
+        .notification-box li { padding: 12px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
+        .notification-box li:last-child { border-bottom: none; }
+        .notification-box .check { color: var(--primary); margin-right: 8px; }
+
+        .research { padding: 80px 0; }
+        .research h2 { text-align: center; font-size: 36px; font-weight: 500; color: var(--text-dark); margin-bottom: 48px; }
+        .research-content { max-width: 700px; margin: 0 auto; background: var(--white); padding: 40px; border-radius: 16px; }
+        .research-content h3 { font-size: 20px; font-weight: 600; color: var(--primary); margin: 24px 0 12px; }
+        .research-content h3:first-child { margin-top: 0; }
+        .research-content p { font-size: 16px; line-height: 1.8; color: var(--text); margin-bottom: 16px; }
+        .research-content ul { margin-left: 24px; margin-bottom: 16px; }
+        .research-content li { margin-bottom: 8px; line-height: 1.7; }
+
+        .cta { padding: 80px 0; background: var(--white); text-align: center; }
+        .cta h2 { font-size: 32px; font-weight: 500; color: var(--text-dark); margin-bottom: 16px; }
+        .cta p { font-size: 18px; color: var(--text-light); margin-bottom: 32px; }
+        .cta-button { display: inline-block; padding: 16px 32px; background: var(--primary); color: var(--white); text-decoration: none; border-radius: 12px; font-size: 16px; font-weight: 600; }
+        .cta-button:hover { background: var(--primary-dark); }
+
+        footer { padding: 48px 0; text-align: center; background: var(--background); border-top: 1px solid var(--border); }
+        footer p { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+        footer nav { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-top: 16px; }
+        footer nav a { font-size: 13px; color: var(--text); text-decoration: none; }
+        footer nav a:hover { color: var(--primary); }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .hero p.subtitle { font-size: 17px; }
+            .understanding-grid { grid-template-columns: 1fr; }
+            nav { gap: 16px; }
+            nav a { font-size: 14px; }
+            nav .icon-link svg { width: 16px; height: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="nd.html" class="logo">beó</a>
+                <nav>
+                    <a href="blog.html">lab notes</a>
+                    <a href="team.html">about</a>
+                    <a href="resources.html">resources</a>
+                    <a href="mailto:info@beo.llc" title="Contact us" class="icon-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Finally, an app designed to work<br><strong>WITH your brain.</strong></h1>
+            <p class="subtitle">You know the cycle. Hyperfocus on your phone for hours. Feel awful. Promise to do better. Repeat. We get it - because we live it too.</p>
+
+            <div class="built-by">
+                <p>🧠 Built by founders with ADHD and ASD who understand</p>
+            </div>
+
+            <div class="signup-form" id="signup">
+                <h3>Join our research study</h3>
+                <form action="https://formspree.io/f/xykkgwwa" method="POST">
+                    <input type="hidden" name="_next" value="https://beo.llc/thanks.html">
+                    <input type="hidden" name="source" id="source" value="nd-direct">
+                    <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
+                    <input type="text" name="name" placeholder="First name (optional)" aria-label="First name">
+                    <select name="device" required aria-label="Your device type">
+                        <option value="" disabled selected>Your device</option>
+                        <option value="ios">iPhone / iPad</option>
+                        <option value="android">Android (notify me when ready)</option>
+                    </select>
+                    <button type="submit">Join the study</button>
+                    <p class="privacy-note">4-week study. ~5 mins/week. 18+ only. Your data stays private. <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="understanding">
+        <div class="container">
+            <h2>We understand because we live it</h2>
+            <div class="understanding-grid">
+                <div class="understanding-card">
+                    <div class="emoji">🌀</div>
+                    <h3>The doom scroll vortex</h3>
+                    <p>You pick up your phone to check one thing. Two hours later, you surface feeling worse than before. Your brain craves the dopamine hits, even when you know they're not helping.</p>
+                    <p class="subtext">Julie has ADHD. She's been there.</p>
+                </div>
+                <div class="understanding-card">
+                    <div class="emoji">🔒</div>
+                    <h3>Apps that punish don't work</h3>
+                    <p>Lockout timers trigger anxiety. Screen time numbers feel like a judgement. Blocking apps becomes a game to defeat. Your brain finds workarounds because it's clever like that.</p>
+                    <p class="subtext">Mark has ASD. Rigid systems don't fit fluid needs.</p>
+                </div>
+                <div class="understanding-card">
+                    <div class="emoji">😔</div>
+                    <h3>The shame spiral</h3>
+                    <p>You already feel bad about your phone use. Apps that show you scary numbers just add guilt. Shame doesn't change behaviour - it makes it worse.</p>
+                    <p class="subtext">No guilt trips here. Promise.</p>
+                </div>
+                <div class="understanding-card">
+                    <div class="emoji">🔔</div>
+                    <h3>Notifications that help</h3>
+                    <p>You'll forget this app exists. That's not a character flaw - it's how our brains work. We'll send reminders because we know you need them. That's support, not nagging.</p>
+                    <p class="subtext">You choose: morning, evening, or none.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="different">
+        <div class="container">
+            <h2>What makes beó different</h2>
+            <p class="intro">We designed this for brains like ours - not neurotypical ideals.</p>
+
+            <div class="comparison">
+                <div class="comparison-row">
+                    <div class="comparison-item old">
+                        <h4>Other apps say</h4>
+                        <p>"You spent 6 hours on your phone today"</p>
+                    </div>
+                    <div class="comparison-item new">
+                        <h4>beó says</h4>
+                        <p>"Ready for a 30-second reset? Run cold water over your hands."</p>
+                    </div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-item old">
+                        <h4>Other apps say</h4>
+                        <p>"You're locked out for the next 2 hours"</p>
+                    </div>
+                    <div class="comparison-item new">
+                        <h4>beó says</h4>
+                        <p>"No lockouts. You're in control. Always."</p>
+                    </div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-item old">
+                        <h4>Other apps say</h4>
+                        <p>"You broke your streak. Start over."</p>
+                    </div>
+                    <div class="comparison-item new">
+                        <h4>beó says</h4>
+                        <p>"No streaks. No points. Just tools when you want them."</p>
+                    </div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-item old">
+                        <h4>Other apps say</h4>
+                        <p>"Set a goal and stick to it"</p>
+                    </div>
+                    <div class="comparison-item new">
+                        <h4>beó says</h4>
+                        <p>"Flexible. Use it daily, weekly, or whenever. No rigid rules."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="notifications">
+        <div class="container">
+            <h2>Yes, we'll remind you</h2>
+            <p class="intro">Because we know you'll forget. That's not a flaw - it's how our brains work. Reminders are support, not surveillance.</p>
+
+            <div class="notification-box">
+                <h3>What you'll get:</h3>
+                <ul>
+                    <li><span class="check">✓</span> One weekly check-in reminder (10 seconds, we promise)</li>
+                    <li><span class="check">✓</span> Optional daily "try a pause" prompt (you choose the time)</li>
+                    <li><span class="check">✓</span> You can turn everything off anytime</li>
+                    <li><span class="check">✓</span> No guilt if you ignore them</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="research">
+        <div class="container">
+            <h2>Help us prove this works</h2>
+            <div class="research-content">
+                <h3>Why we need you</h3>
+                <p>Most digital wellbeing research doesn't include neurodivergent people specifically. We want to change that. Your experience matters.</p>
+
+                <h3>What you'll do</h3>
+                <ul>
+                    <li>Download the app (iOS, free)</li>
+                    <li>Answer 5 quick questions at the start (2 mins)</li>
+                    <li>Try brief "pause" exercises when you feel like it</li>
+                    <li>Rate how in control you felt each week (10 seconds)</li>
+                    <li>Answer 5 questions at the end (2 mins)</li>
+                </ul>
+
+                <h3>What you'll get</h3>
+                <ul>
+                    <li>Free access to the app</li>
+                    <li>First look at what we discover</li>
+                    <li>Helping build something designed for brains like yours</li>
+                </ul>
+
+                <h3>The commitment</h3>
+                <p>4 weeks. About 5 minutes per week total. We'll remind you (because we know you need it).</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to try something different?</h2>
+            <p>Built by people with ADHD and ASD. For brains like ours.</p>
+            <a href="#signup" class="cta-button">Join the study</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 beó LLC</p>
+            <nav>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <a href="blog.html">Lab Notes</a>
+                <a href="resources.html">Resources</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        // Capture source from URL parameter (ref=community, ref=research, etc.)
+        const urlParams = new URLSearchParams(window.location.search);
+        const ref = urlParams.get('ref');
+        if (ref) {
+            document.getElementById('source').value = ref;
+        }
+    </script>
+</body>
+</html>
