@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; font-src 'self';">
     <title>Resources – beó</title>
     <meta name="description" content="Books, channels, apps and research on digital wellbeing. Whether beó helps you or not, these resources might.">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Digital Wellbeing Resources – beó">
@@ -20,20 +23,8 @@
         gtag('js', new Date());
         gtag('config', 'G-9KPL21EX4E');
     </script>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        :root { --primary: #3D6B4A; --primary-dark: #2D5A3D; --background: #F5F5F3; --text-dark: #1A1A1A; --text: #4A4A4A; --text-light: #7A7A7A; --text-muted: #9A9A9A; --white: #FFFFFF; --border: #E0E0E0; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--background); color: var(--text); line-height: 1.6; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-        header { padding: 24px 0; background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
-        .header-content { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 28px; font-weight: 600; text-decoration: none; color: var(--primary); }
-        nav { display: flex; gap: 24px; align-items: center; }
-        nav a { color: var(--text); text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s; }
-        nav a:hover { color: var(--primary); }
-        nav .icon-link { display: inline-flex; align-items: center; padding: 4px; }
-        nav .icon-link svg { display: block; }
-
         .hero { padding: 80px 0 40px; text-align: center; }
         .hero h1 { font-size: 42px; font-weight: 500; color: var(--text-dark); margin-bottom: 16px; }
         .hero p { font-size: 18px; color: var(--text-light); max-width: 600px; margin: 0 auto; }
@@ -69,20 +60,11 @@
         .disclaimer { padding: 60px 0; text-align: center; }
         .disclaimer p { font-size: 14px; color: var(--text-light); max-width: 600px; margin: 0 auto; line-height: 1.7; }
 
-        footer { padding: 48px 0; text-align: center; background: var(--background); border-top: 1px solid var(--border); }
-        footer p { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
-        footer .enterprise { font-size: 13px; color: var(--text); margin: 8px 0; }
-        footer .enterprise a { color: var(--primary); text-decoration: none; font-weight: 600; }
-        footer nav { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-top: 16px; }
-        footer nav a { font-size: 13px; color: var(--text); text-decoration: none; }
-        footer nav a:hover { color: var(--primary); }
+        footer { background: var(--background); }
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 32px; }
             .resources-section h2 { font-size: 24px; }
-            nav { gap: 16px; }
-            nav a { font-size: 14px; }
-            nav .icon-link svg { width: 16px; height: 16px; }
             .resource-card { flex: 0 0 260px; }
         }
     </style>

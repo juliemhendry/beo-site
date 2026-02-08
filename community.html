@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://formspree.io; font-src 'self'; form-action 'self' https://formspree.io;">
     <title>beó – Built by people with ADHD and ASD. For brains like ours.</title>
     <meta name="description" content="Finally, an app that works WITH your brain, not against it. Built by founders with ADHD and ASD who understand the hyperfocus-doom-scroll cycle. No shame. No guilt. Just tools that actually help.">
     <meta name="keywords" content="ADHD phone addiction, ASD screen time, neurodivergent digital wellbeing, ADHD doom scrolling, autism phone use, neurodiversity app">
@@ -19,6 +20,8 @@
     <meta name="twitter:title" content="beó – Built by people with ADHD and ASD">
     <meta name="twitter:description" content="Finally, an app that works WITH your brain. No shame, no scary numbers.">
 
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9KPL21EX4E"></script>
     <script>
@@ -27,19 +30,9 @@
         gtag('js', new Date());
         gtag('config', 'G-9KPL21EX4E');
     </script>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        :root { --primary: #3D6B4A; --primary-dark: #2D5A3D; --background: #F5F5F3; --text-dark: #1A1A1A; --text: #4A4A4A; --text-light: #7A7A7A; --text-muted: #9A9A9A; --white: #FFFFFF; --border: #E0E0E0; --accent: #6B5B95; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--background); color: var(--text); line-height: 1.6; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-        header { padding: 24px 0; background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
-        .header-content { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 28px; font-weight: 600; text-decoration: none; color: var(--primary); }
-        nav { display: flex; gap: 24px; align-items: center; }
-        nav a { color: var(--text); text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s; }
-        nav a:hover { color: var(--primary); }
-        nav .icon-link { display: inline-flex; align-items: center; padding: 4px; }
-        nav .icon-link svg { display: block; }
+        :root { --accent: #6B5B95; }
         .hero { padding: 80px 0 60px; text-align: center; }
         .hero h1 { font-size: 48px; font-weight: 500; color: var(--text-dark); margin-bottom: 24px; line-height: 1.2; }
         .hero h1 strong { color: var(--primary); font-weight: 600; }
@@ -104,19 +97,10 @@
         .cta-button { display: inline-block; padding: 16px 32px; background: var(--primary); color: var(--white); text-decoration: none; border-radius: 12px; font-size: 16px; font-weight: 600; }
         .cta-button:hover { background: var(--primary-dark); }
 
-        footer { padding: 48px 0; text-align: center; background: var(--background); border-top: 1px solid var(--border); }
-        footer p { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
-        footer nav { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-top: 16px; }
-        footer nav a { font-size: 13px; color: var(--text); text-decoration: none; }
-        footer nav a:hover { color: var(--primary); }
-
         @media (max-width: 768px) {
             .hero h1 { font-size: 32px; }
             .hero p.subtitle { font-size: 17px; }
             .understanding-grid { grid-template-columns: 1fr; }
-            nav { gap: 16px; }
-            nav a { font-size: 14px; }
-            nav .icon-link svg { width: 16px; height: 16px; }
         }
     </style>
 </head>
@@ -149,6 +133,7 @@
                 <form action="https://formspree.io/f/xykkgwwa" method="POST">
                     <input type="hidden" name="_next" value="https://beo.llc/thanks.html">
                     <input type="hidden" name="source" id="source" value="community">
+                    <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
                     <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
                     <input type="text" name="name" placeholder="First name (optional)" aria-label="First name">
                     <select name="device" required aria-label="Your device type">
@@ -315,7 +300,7 @@
         // Capture source from URL parameter (ref=community, ref=research, etc.)
         const urlParams = new URLSearchParams(window.location.search);
         const ref = urlParams.get('ref');
-        if (ref) {
+        if (ref && /^[a-zA-Z0-9_-]{1,50}$/.test(ref)) {
             document.getElementById('source').value = ref;
         }
     </script>
