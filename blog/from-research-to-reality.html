@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From Research to Reality – beó Lab Notes</title>
+    <meta name="description" content="How a 2020 MSc Psychology study on the perception gap became the foundation for beó's approach to digital wellbeing.">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9KPL21EX4E"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9KPL21EX4E');
+    </script>
+    <style>
+        :root {
+            --primary: #3D6B4A;
+            --primary-dark: #2D5A3D;
+            --background: #F5F5F3;
+            --text-dark: #1A1A1A;
+            --text: #4A4A4A;
+            --text-light: #7A7A7A;
+            --text-muted: #9A9A9A;
+            --white: #FFFFFF;
+            --border: #E0E0E0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--background); color: var(--text); line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        header { padding: 24px 0; background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 28px; font-weight: 600; text-decoration: none; color: var(--primary); }
+        nav { display: flex; gap: 32px; }
+        nav a { color: var(--text); text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s; }
+        nav a:hover { color: var(--primary); }
+
+        .post-header { padding: 80px 0 40px; background: var(--white); border-bottom: 1px solid var(--border); }
+        .post-header h1 { font-size: 42px; font-weight: 500; color: var(--text-dark); margin-bottom: 16px; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .post-meta { font-size: 14px; color: var(--text-muted); max-width: 800px; margin: 0 auto; }
+        .post-author { display: flex; align-items: center; gap: 12px; max-width: 800px; margin: 20px auto 0; }
+        .author-photo { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
+        .author-info { font-size: 14px; }
+        .author-name { color: var(--text-dark); font-weight: 600; }
+        .author-title { color: var(--text-muted); }
+
+        .research-chart { background: var(--white); padding: 32px; border-radius: 12px; margin: 36px 0; border: 1px solid var(--border); }
+        .chart-title { font-size: 16px; font-weight: 600; color: var(--text-dark); margin-bottom: 24px; text-align: center; }
+        .correlation-bars { display: flex; flex-direction: column; gap: 16px; }
+        .corr-item { display: flex; align-items: center; gap: 16px; }
+        .corr-label { width: 180px; font-size: 14px; color: var(--text); flex-shrink: 0; }
+        .corr-bar-container { flex: 1; height: 32px; background: var(--background); border-radius: 4px; position: relative; overflow: hidden; }
+        .corr-bar { height: 100%; border-radius: 4px; display: flex; align-items: center; justify-content: flex-end; padding-right: 12px; }
+        .corr-bar.strong { background: var(--primary); }
+        .corr-bar.weak { background: #E57373; }
+        .corr-value { font-size: 13px; font-weight: 600; color: white; }
+
+        article { max-width: 800px; margin: 60px auto; padding: 0 24px; }
+        article p { font-size: 18px; line-height: 1.8; color: var(--text); margin-bottom: 24px; }
+        article h2 { font-size: 32px; font-weight: 500; color: var(--text-dark); margin: 48px 0 24px; }
+        article h3 { font-size: 24px; font-weight: 600; color: var(--primary); margin: 36px 0 16px; }
+        article strong { color: var(--text-dark); font-weight: 600; }
+        article em { color: var(--text-dark); font-style: italic; }
+        article ul { margin: 24px 0 24px 32px; }
+        article li { margin-bottom: 12px; line-height: 1.8; }
+
+        .callout { background: #f0f7f3; padding: 32px; border-radius: 12px; border-left: 4px solid var(--primary); margin: 36px 0; }
+        .callout p { margin-bottom: 0; }
+
+        .highlight { background: var(--background); padding: 24px; border-radius: 12px; margin: 32px 0; }
+
+        .cta { background: var(--primary); color: var(--white); padding: 48px; border-radius: 16px; text-align: center; margin: 60px 0; }
+        .cta h3 { font-size: 28px; font-weight: 600; margin-bottom: 16px; color: var(--white); }
+        .cta p { font-size: 18px; margin-bottom: 24px; color: var(--white); opacity: 0.9; }
+        .cta a { display: inline-block; padding: 16px 32px; background: var(--white); color: var(--primary); text-decoration: none; border-radius: 12px; font-size: 16px; font-weight: 600; transition: transform 0.2s; }
+        .cta a:hover { transform: translateY(-2px); }
+
+        footer { padding: 48px 0; text-align: center; background: var(--white); border-top: 1px solid var(--border); }
+        footer p { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+        footer .enterprise { font-size: 13px; color: var(--text); margin: 16px 0; }
+        footer .enterprise a { color: var(--primary); text-decoration: none; font-weight: 600; }
+        footer nav { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-top: 16px; }
+        footer nav a { font-size: 13px; color: var(--text); text-decoration: none; transition: color 0.2s; }
+        footer nav a:hover { color: var(--primary); }
+
+        @media (max-width: 768px) {
+            .post-header h1 { font-size: 32px; }
+            article p { font-size: 16px; }
+            article h2 { font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">beó</a>
+                <nav>
+                    <a href="../blog.html">lab notes</a>
+                    <a href="../team.html">about</a>
+                    <a href="../resources.html">resources</a>
+                    <a href="mailto:info@beo.llc" title="Contact us">✉️</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="post-header">
+        <div class="container">
+            <p style="margin-bottom: 24px;"><a href="../blog.html" style="color: var(--text-muted); text-decoration: none; font-size: 14px;">← Back to Lab Notes</a></p>
+            <h1>From Research to Reality</h1>
+            <p class="post-meta">28 January 2026</p>
+            <a href="../blog.html" class="post-author" style="text-decoration: none;" title="View all posts">
+                <img src="../julie-photo.png" alt="Julie Hendry" class="author-photo">
+                <div class="author-info">
+                    <div class="author-name">Julie Hendry</div>
+                    <div class="author-title">CTO</div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <article>
+        <p>In 2020, I completed an MSc Psychology dissertation investigating social media's effects on attention. The original aim was to measure attentional bias using a Stroop task, but the most interesting finding emerged from the data itself: the perception gap.</p>
+
+        <h2>What we found</h2>
+
+        <p>I recruited 82 participants aged 18 to 30, all iPhone users. They completed validated questionnaires measuring their technology use (MTUAS, SUQ) and provided screenshots of their actual iPhone Screen Time data.</p>
+
+        <p>The Stroop task results showed no significant attentional bias for social media related words, even among heavy users. That was interesting in itself, challenging assumptions about social media "addiction" mechanisms. But the correlation analysis revealed something more fundamental.</p>
+
+        <div class="research-chart">
+            <div class="chart-title">Correlation with Actual iPhone Screen Time Data</div>
+            <div class="correlation-bars">
+                <div class="corr-item">
+                    <div class="corr-label">Social media frequency</div>
+                    <div class="corr-bar-container">
+                        <div class="corr-bar strong" style="width: 72%;">
+                            <span class="corr-value">r = .54**</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="corr-item">
+                    <div class="corr-label">Social media usage score</div>
+                    <div class="corr-bar-container">
+                        <div class="corr-bar strong" style="width: 65%;">
+                            <span class="corr-value">r = .48**</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="corr-item">
+                    <div class="corr-label">"Addiction" questionnaire</div>
+                    <div class="corr-bar-container">
+                        <div class="corr-bar weak" style="width: 18%;">
+                            <span class="corr-value" style="color: var(--text);">r = .12 (ns)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p style="font-size: 13px; color: var(--text-muted); margin-top: 16px; text-align: center;">** p < .01, ns = not significant. Data from 82 iPhone users aged 18-30. Hendry (2020)</p>
+        </div>
+
+        <div class="highlight">
+            <p><strong>Participants' self-reported social media use strongly correlated with their actual iPhone data</strong> (screen time, notifications, pickups). People could accurately report how often they used social media.</p>
+
+            <p style="margin-top: 16px;"><strong>But self-reported smartphone addiction scores showed no significant correlation with actual iPhone usage.</strong> The questionnaires designed to measure "problematic use" didn't predict actual behaviour.</p>
+        </div>
+
+        <h2>What this means</h2>
+
+        <p>There's a fundamental disconnect between what users <em>believe</em> about their smartphone habits and what they <em>actually</em> do. People can report their social media frequency accurately, but addiction-based assessments don't reflect reality.</p>
+
+        <p>This perception gap has profound implications for intervention design:</p>
+
+        <ul>
+            <li><strong>If measurement tools don't reflect reality, how can interventions work?</strong> Most digital wellbeing research relies on self-report questionnaires. If these don't predict actual behaviour, we're measuring the wrong thing.</li>
+
+            <li><strong>If users think they're "addicted" but this perception doesn't match behaviour, are we solving the right problem?</strong> Addiction-focused approaches may be treating a symptom (perceived loss of control) rather than the underlying issue (design patterns that exploit attention).</li>
+
+            <li><strong>Users need to see reality before they can change behaviour.</strong> If your self-perception differs from actual usage patterns, interventions that assume accurate self-awareness will fail.</li>
+        </ul>
+
+        <h2>beó's approach</h2>
+
+        <p>This research became beó's founding hypothesis: we need to close the perception gap first. Users need three things:</p>
+
+        <div class="callout">
+            <p><strong>1. Accurate data</strong> about their actual habits (not estimates, not addiction scores)<br><br>
+            <strong>2. Context</strong> to understand why their behaviour doesn't match their beliefs (design patterns, perception gaps)<br><br>
+            <strong>3. Evidence-based interventions</strong> they can choose when they want to interrupt automatic patterns</p>
+        </div>
+
+        <p>This isn't just another app telling you to use your phone less. It's a research study testing whether understanding leads to meaningful change.</p>
+
+        <h3>The hypothesis we're testing</h3>
+
+        <p>Closing the perception gap, combined with evidence-based interventions, helps users make informed choices about their technology use.</p>
+
+        <h3>The method</h3>
+
+        <p>Everything we build is grounded in published research:</p>
+
+        <ul>
+            <li><strong>BSMAS assessment</strong> for baseline (Andreassen et al., 2017)</li>
+            <li><strong>28 evidence-based interventions</strong> across 7 categories: breathe, move, sense, light & air, nature, connect, focus</li>
+            <li><strong>Perception gap tracking</strong> (estimated vs actual screen time)</li>
+            <li><strong>Anonymous data collection</strong> following BPS ethics guidelines</li>
+        </ul>
+
+        <p>Launch February 2026. First findings Easter 2026.</p>
+
+        <h2>Why this matters now</h2>
+
+        <p>99% of 18 to 24 year olds in the UK have a smartphone. 93% have at least one social media profile. This isn't a niche issue, it's the baseline human experience for an entire generation.</p>
+
+        <p>Yet most research still focuses on finding pathology: addiction, anxiety, depression. As Davidson and Ellis (2019) called it, "technological déjà vu" -the same moral panic that accompanied television, video games, and every new technology.</p>
+
+        <p>We need research that starts from a different place: <strong>What actually helps people use technology in ways that align with their values?</strong></p>
+
+        <p>Not abstinence. Not shame. Not taking away control. Understanding, then choice.</p>
+
+        <h2>From academic to applied</h2>
+
+        <p>beó is what happens when academic research meets enterprise engineering. I spent 20+ years building technology for Fortune 500 companies. I know how to ship reliable systems at scale. The MSc taught me research rigour: methodology, ethics, statistical power, ecological validity.</p>
+
+        <p>Now I'm building the tool I needed to test whether this approach works. Not as a commercial product first, but as a research study. We'll publish findings. We'll share what works and what doesn't. We'll contribute to the evidence base instead of adding to the noise.</p>
+
+        <p>If closing the perception gap helps, we'll know. If the interventions work for some people but not others, we'll see the patterns. If the whole hypothesis is wrong, we'll have the data to show it.</p>
+
+        <p>That's the point of research: testing ideas properly, not selling solutions.</p>
+
+        <div class="cta">
+            <h3>Join the research</h3>
+            <p>Help us test whether closing the perception gap, understanding design patterns, and choosing evidence-based interventions actually helps people reclaim real life.</p>
+            <a href="../index.html#top">Sign up for February 2026 launch</a>
+        </div>
+
+    </article>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 beó LLC</p>
+            <p class="enterprise">Academic & research collaboration: <a href="mailto:lab@beo.llc">lab@beo.llc</a></p>
+            <p class="enterprise">Enterprise & partnerships: <a href="mailto:info@beo.llc">info@beo.llc</a></p>
+            <nav>
+                <a href="../privacy.html">Privacy</a>
+                <a href="../terms.html">Terms</a>
+                <a href="../blog.html">Lab Notes</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
