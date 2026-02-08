@@ -203,6 +203,7 @@
                 <form action="https://formspree.io/f/xykkgwwa" method="POST">
                     <input type="hidden" name="_next" value="https://beo.llc/thanks.html">
                     <input type="hidden" name="source" id="source" value="direct">
+                    <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
                     <input type="email" name="email" placeholder="Your email" required>
                     <input type="text" name="name" placeholder="First name (optional)">
                     <select name="device" required style="width: 100%; padding: 14px 16px; border: 2px solid var(--border); border-radius: 12px; font-size: 16px; margin-bottom: 16px; background: var(--white); color: var(--text);">
@@ -387,7 +388,7 @@
         // Capture source from URL parameter (ref=social, ref=study, etc.)
         const urlParams = new URLSearchParams(window.location.search);
         const ref = urlParams.get('ref');
-        if (ref) {
+        if (ref && /^[a-zA-Z0-9_-]{1,50}$/.test(ref)) {
             document.getElementById('source').value = ref;
         }
     </script>
