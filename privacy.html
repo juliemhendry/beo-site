@@ -1,149 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - beò</title>
-    
+    <title>Privacy Policy – beó</title>
+    <meta name="description" content="Privacy Policy for beó digital wellbeing research">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9KPL21EX4E"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9KPL21EX4E');
+    </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap');
-        
         :root {
-            --sage: #8BA888;
-            --dark-bg: #1a1a1a;
-            --card-bg: #2a2a2a;
-            --text: #e8e8e8;
-            --text-muted: #a0a0a0;
+            --primary: #3D6B4A;
+            --background: #F5F5F3;
+            --text-dark: #1A1A1A;
+            --text: #4A4A4A;
+            --text-light: #7A7A7A;
+            --white: #FFFFFF;
+            --border: #E0E0E0;
         }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'DM Sans', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--text);
-            line-height: 1.8;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-        }
-        
-        h1, h2 {
-            font-family: 'Instrument Serif', serif;
-            color: var(--sage);
-            margin-bottom: 1rem;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        h2 {
-            font-size: 1.75rem;
-            margin-top: 2rem;
-        }
-        
-        p {
-            margin-bottom: 1rem;
-        }
-        
-        .last-updated {
-            color: var(--text-muted);
-            font-size: 0.875rem;
-            margin-bottom: 2rem;
-        }
-        
-        a {
-            color: var(--sage);
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-        }
-        
-        .back-link {
-            display: inline-block;
-            margin-bottom: 2rem;
-            font-weight: 500;
-        }
-        
-        footer {
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(139, 168, 136, 0.2);
-            text-align: center;
-            color: var(--text-muted);
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--background); color: var(--text); line-height: 1.7; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+        header { padding: 24px 0; background: var(--white); border-bottom: 1px solid var(--border); }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 28px; font-weight: 600; text-decoration: none; color: var(--primary); }
+        nav { display: flex; gap: 24px; align-items: center; }
+        nav a { color: var(--text); text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s; }
+        nav a:hover { color: var(--primary); }
+        nav .icon-link { display: inline-flex; align-items: center; padding: 4px; }
+        nav .icon-link svg { display: block; }
+        main { padding: 60px 0; }
+        h1 { font-size: 48px; font-weight: 500; color: var(--text-dark); margin-bottom: 16px; }
+        .last-updated { font-size: 14px; color: var(--text-light); margin-bottom: 48px; }
+        h2 { font-size: 28px; font-weight: 500; color: var(--text-dark); margin: 48px 0 24px; }
+        h3 { font-size: 20px; font-weight: 600; color: var(--primary); margin: 32px 0 16px; }
+        p { font-size: 16px; line-height: 1.8; margin-bottom: 16px; }
+        ul { margin: 16px 0 16px 32px; }
+        li { margin-bottom: 12px; line-height: 1.7; }
+        strong { color: var(--text-dark); font-weight: 600; }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .notice { background: #f0f7f3; padding: 24px; border-radius: 12px; border-left: 4px solid var(--primary); margin: 32px 0; }
+        footer { padding: 48px 0; text-align: center; background: var(--white); border-top: 1px solid var(--border); margin-top: 60px; }
+        footer p { font-size: 14px; color: var(--text-light); }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="/" class="back-link">← Back to beò</a>
-        
-        <h1>Privacy Policy</h1>
-        <p class="last-updated">Last updated: January 12, 2025</p>
-        
-        <h2>Overview</h2>
-        <p>beò ("we," "our," or "us") respects your privacy. This policy explains how we collect, use, and protect your information when you sign up for our beta waitlist or use our services.</p>
-        
-        <h2>Information We Collect</h2>
-        <p><strong>Beta Waitlist:</strong> When you join our waitlist, we collect your email address and optionally your name and feedback about what excites you about beò. This is processed through Formspree and stored securely.</p>
-        
-        <p><strong>App Usage (When Launched):</strong> The beò app will collect data about your phone usage patterns, mood check-ins, and intervention interactions. This data is used solely to provide you with personalized insights and improve your digital wellbeing experience.</p>
-        
-        <h2>How We Use Your Information</h2>
-        <p>We use your information to:</p>
-        <ul style="margin-left: 2rem; margin-bottom: 1rem;">
-            <li>Send you beta launch notifications and updates</li>
-            <li>Provide personalized digital wellbeing insights</li>
-            <li>Improve our app features and interventions</li>
-            <li>Conduct research on digital wellbeing (aggregated and anonymized)</li>
-        </ul>
-        
-        <h2>Data Sharing</h2>
-        <p>We do not sell your personal information. We may share anonymized, aggregated data for research purposes. Your individual data is never shared with third parties except:</p>
-        <ul style="margin-left: 2rem; margin-bottom: 1rem;">
-            <li>Service providers who help us operate the app (e.g., Formspree for email collection)</li>
-            <li>When required by law</li>
-        </ul>
-        
-        <h2>Data Security</h2>
-        <p>We implement appropriate security measures to protect your information. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.</p>
-        
-        <h2>Your Rights</h2>
-        <p>You have the right to:</p>
-        <ul style="margin-left: 2rem; margin-bottom: 1rem;">
-            <li>Access the personal data we hold about you</li>
-            <li>Request correction of inaccurate data</li>
-            <li>Request deletion of your data</li>
-            <li>Opt out of marketing communications at any time</li>
-        </ul>
-        
-        <h2>Data Retention</h2>
-        <p>Waitlist data is retained until you opt out or until the beta program concludes. App usage data is retained as long as you maintain an active account, plus 90 days after account closure for backup purposes.</p>
-        
-        <h2>Children's Privacy</h2>
-        <p>beò is not intended for users under 16 years of age. We do not knowingly collect information from children under 16.</p>
-        
-        <h2>Changes to This Policy</h2>
-        <p>We may update this privacy policy from time to time. We will notify you of significant changes via email (if you're on our waitlist) or through prominent notice in the app.</p>
-        
-        <h2>Contact Us</h2>
-        <p>If you have questions about this privacy policy or want to exercise your rights, contact us at:</p>
-        <p><a href="mailto:beta@beo.llc">beta@beo.llc</a></p>
-        
-        <footer>
-            <p>© 2025 beò • <a href="/">Return to Home</a></p>
-        </footer>
-    </div>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">beó</a>
+                <nav>
+                    <a href="blog.html">lab notes</a>
+                    <a href="team.html">about</a>
+                    <a href="resources.html">resources</a>
+                    <a href="mailto:info@beo.llc" title="Contact us" class="icon-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last updated: 3 February 2026</p>
+
+            <p>beó LLC ("we", "us", or "our") operates beo.llc and conducts digital wellbeing research. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or participate in our research.</p>
+
+            <div class="notice">
+                <p><strong>Key principle:</strong> We are committed to truly anonymous research data collection. We do not collect, store, or have access to personally identifiable information from research participants.</p>
+            </div>
+
+            <h2>1. Information We Collect</h2>
+
+            <h3>1.1 Website Visitors</h3>
+            <p><strong>Email signup form:</strong> When you sign up for research updates via our website form, we collect:</p>
+            <ul>
+                <li>Your email address (required)</li>
+                <li>Your first name (optional)</li>
+            </ul>
+            <p>This information is processed via Formspree and stored securely. We use it solely to notify you when research launches and to send research-related updates.</p>
+
+            <p><strong>Analytics (if implemented):</strong> We may use Google Analytics to understand website traffic patterns. This collects anonymised data about page views, referral sources, and general visitor behaviour. You can opt out using browser extensions or Google's opt-out tools.</p>
+
+            <h3>1.2 Research Participants</h3>
+            <p><strong>Truly anonymous data:</strong> If you participate in our research study via the beó app, we collect:</p>
+            <ul>
+                <li>Anonymous scores from the Bergen Social Media Addiction Scale (BSMAS)</li>
+                <li>Anonymised perception gap data (estimated vs actual screen time)</li>
+                <li>Anonymous intervention completion patterns</li>
+                <li>Aggregated usage statistics</li>
+            </ul>
+
+            <p><strong>What we do NOT collect from research participants:</strong></p>
+            <ul>
+                <li>❌ Names, email addresses, or contact information</li>
+                <li>❌ Device IDs, IP addresses, or location data</li>
+                <li>❌ Screenshots or specific content you view</li>
+                <li>❌ Any personally identifiable information</li>
+            </ul>
+
+            <p>All research data stays on your phone. Only anonymous, aggregated statistics are shared with beó for research analysis.</p>
+
+            <h2>2. How We Use Your Information</h2>
+
+            <h3>2.1 Website Email Signups</h3>
+            <ul>
+                <li>To notify you when research launches</li>
+                <li>To send research findings updates</li>
+                <li>To communicate about beó developments (you can unsubscribe anytime)</li>
+            </ul>
+
+            <h3>2.2 Research Data</h3>
+            <ul>
+                <li>To analyse perception gaps between estimated and actual phone use</li>
+                <li>To understand which intervention types are most effective</li>
+                <li>To publish research findings</li>
+                <li>To improve evidence-based digital wellbeing tools</li>
+            </ul>
+
+            <h2>3. Data Sharing and Disclosure</h2>
+
+            <p>We do not sell, trade, rent, or share your personal information with third parties, except:</p>
+
+            <ul>
+                <li><strong>Service providers:</strong> Formspree (email collection), Google Analytics (if used) – subject to their privacy policies</li>
+                <li><strong>Legal requirements:</strong> If required by law, court order, or government regulation</li>
+                <li><strong>Research publication:</strong> Anonymous, aggregated research findings may be published in academic journals or shared publicly</li>
+            </ul>
+
+            <p><strong>We explicitly do NOT:</strong></p>
+            <ul>
+                <li>❌ Sell your data to advertisers or data brokers</li>
+                <li>❌ Share individual research data with third parties</li>
+                <li>❌ Use your data for targeted advertising</li>
+            </ul>
+
+            <h2>4. Data Storage and Security</h2>
+
+            <p><strong>Website signups:</strong> Email addresses are stored securely via Formspree (USA-based, GDPR compliant) and our own secure systems.</p>
+
+            <p><strong>Research data:</strong> Your individual research data stays on your phone. Only anonymous, aggregated statistics are transmitted to our secure servers. We use industry-standard encryption and security practices.</p>
+
+            <h2>5. Your Rights</h2>
+
+            <h3>5.1 Email Signup List</h3>
+            <p>You have the right to:</p>
+            <ul>
+                <li><strong>Access:</strong> Request a copy of data we hold about you</li>
+                <li><strong>Correction:</strong> Request correction of inaccurate data</li>
+                <li><strong>Deletion:</strong> Request deletion of your email from our list</li>
+                <li><strong>Unsubscribe:</strong> Opt out of emails at any time via unsubscribe link</li>
+            </ul>
+
+            <h3>5.2 Research Participants</h3>
+            <p><strong>Truly anonymous = no right-to-delete needed:</strong> Because research data is collected anonymously (no device IDs, no personally identifiable information), we cannot link data back to you. This means:</p>
+            <ul>
+                <li>We cannot identify which data is "yours"</li>
+                <li>We cannot delete specific data upon request</li>
+                <li>Your privacy is protected by design, not by deletion</li>
+            </ul>
+
+            <p>You can stop participating at any time by uninstalling the app. Future data collection stops immediately.</p>
+
+            <h2>6. International Data Transfers</h2>
+
+            <p>beó LLC is based in Wyoming, USA. If you are accessing our website or participating in research from outside the United States, your information may be transferred to, stored, and processed in the USA or other countries where our service providers operate.</p>
+
+            <p>We comply with applicable data protection regulations, including GDPR for EU residents and equivalent standards globally.</p>
+
+            <h2>7. Research Ethics</h2>
+
+            <p>Our research follows the British Psychological Society Code of Human Research Ethics. Key principles:</p>
+            <ul>
+                <li><strong>Voluntary participation:</strong> You can stop participating at any time</li>
+                <li><strong>Informed consent:</strong> You'll be informed about what data is collected before participating</li>
+                <li><strong>Anonymity:</strong> No personally identifiable information is collected</li>
+                <li><strong>Transparency:</strong> Research findings will be published openly</li>
+            </ul>
+
+            <h2>8. Children's Privacy</h2>
+
+            <p>Our research is open to participants aged 18 and older only. We do not knowingly collect information from individuals under 18. If we discover that we have inadvertently collected information from someone under 18, we will delete it immediately.</p>
+
+            <h2>9. Cookies and Tracking</h2>
+
+            <p><strong>Current status:</strong> Our website does not use cookies for tracking. If we implement Google Analytics, we will update this policy and notify you.</p>
+
+            <p><strong>Essential cookies only:</strong> We may use essential cookies required for website functionality (e.g., remembering form inputs). These do not track you across sites.</p>
+
+            <h2>10. Changes to This Privacy Policy</h2>
+
+            <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will:</p>
+            <ul>
+                <li>Post the updated policy on this page</li>
+                <li>Update the "Last updated" date</li>
+                <li>Notify email subscribers if changes materially affect their rights</li>
+            </ul>
+
+            <p>Your continued use of our website or participation in research after changes constitutes acceptance of the updated policy.</p>
+
+            <h2>11. Contact Us</h2>
+
+            <p>For questions about this Privacy Policy or to exercise your rights:</p>
+            <ul>
+                <li><strong>General enquiries:</strong> <a href="mailto:info@beo.llc">info@beo.llc</a></li>
+                <li><strong>Research privacy questions:</strong> <a href="mailto:lab@beo.llc">lab@beo.llc</a></li>
+                <li><strong>Data protection requests:</strong> <a href="mailto:privacy@beo.llc">privacy@beo.llc</a></li>
+            </ul>
+
+            <h2>12. Governing Law</h2>
+
+            <p>This Privacy Policy is governed by the laws of the State of Wyoming, United States. For EU residents, this policy also complies with GDPR requirements.</p>
+
+            <div class="notice">
+                <p><strong>Summary:</strong> We take your privacy seriously. Website signups are minimal (email only), research data is truly anonymous (no way to identify you), and we don't sell your data to anyone. Simple.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 beó | <a href="index.html">Home</a> | <a href="terms.html">Terms</a></p>
+        </div>
+    </footer>
 </body>
 </html>
