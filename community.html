@@ -315,12 +315,21 @@
     </footer>
 
     <script>
-        // Capture source from URL parameter (ref=community, ref=research, etc.)
-        const urlParams = new URLSearchParams(window.location.search);
-        const ref = urlParams.get('ref');
-        if (ref) {
-            document.getElementById('source').value = ref;
-        }
+        // Capture source from URL parameter and persist in sessionStorage
+        // This ensures we don't lose tracking if user clicks around the site
+        (function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const refFromUrl = urlParams.get('ref');
+
+            // If URL has ref param, store it (this is the original entry point)
+            if (refFromUrl) {
+                sessionStorage.setItem('beo_source', refFromUrl);
+            }
+
+            // Use stored source first, then URL param, then default (community for this page)
+            const source = sessionStorage.getItem('beo_source') || refFromUrl || 'community';
+            document.getElementById('source').value = source;
+        })();
     </script>
 </body>
 </html>

@@ -259,7 +259,7 @@
                 <p><strong>What we're testing:</strong> Do simple reconnection habits - breathing, movement, nature, connection - help people feel that technology is serving them rather than controlling them? We measure this weekly, plus a validated scale at the start and end. We share what we find - including what doesn't work.</p>
             </div>
 
-            <p>We use the latest validated measures (2023) because the field has evolved. We pre-register our hypotheses so you know we're not cherry-picking results. And we acknowledge our limitations: this is an exploratory study with self-selected participants.</p>
+            <p>We use the latest validated measures (2023) because the field has evolved. We <a href="https://doi.org/10.17605/OSF.IO/4RS7C" style="color: var(--primary); text-decoration: none; font-weight: 500;">pre-register our hypotheses</a> so you know we're not cherry-picking results. And we acknowledge our limitations: this is an exploratory study with self-selected participants.</p>
 
             <p class="methodology"><strong>Sources:</strong> Janicke-Bowles et al. (2023) | <a href="https://osf.io/preprints/psyarxiv/z7yp5" style="color: var(--primary);">Hendry (2020, n=82)</a> | Andrews et al. (2015) | Parry et al. (2021)</p>
         </div>
@@ -388,12 +388,21 @@
     </footer>
 
     <script>
-        // Capture source from URL parameter (ref=social, ref=study, etc.)
-        const urlParams = new URLSearchParams(window.location.search);
-        const ref = urlParams.get('ref');
-        if (ref) {
-            document.getElementById('source').value = ref;
-        }
+        // Capture source from URL parameter and persist in sessionStorage
+        // This ensures we don't lose tracking if user clicks around the site
+        (function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const refFromUrl = urlParams.get('ref');
+
+            // If URL has ref param, store it (this is the original entry point)
+            if (refFromUrl) {
+                sessionStorage.setItem('beo_source', refFromUrl);
+            }
+
+            // Use stored source first, then URL param, then default
+            const source = sessionStorage.getItem('beo_source') || refFromUrl || 'direct';
+            document.getElementById('source').value = source;
+        })();
     </script>
 </body>
 </html>
