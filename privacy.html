@@ -3,72 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy – beó</title>
-    <meta name="description" content="Privacy Policy for beó digital wellbeing research">
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9KPL21EX4E"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-9KPL21EX4E');
-    </script>
+    <title>Privacy Policy | beó</title>
+    <meta name="description" content="Privacy Policy for beó research services">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #3D6B4A;
-            --background: #F5F5F3;
-            --text-dark: #1A1A1A;
-            --text: #4A4A4A;
-            --text-light: #7A7A7A;
+            --green-deep: #1B4332;
+            --green-primary: #2D5A27;
+            --sage: #8E9F8E;
+            --sage-light: #C2CEC2;
+            --cream: #FAFAF7;
+            --cream-warm: #F5F3EE;
+            --stone: #E8E6E1;
+            --text-primary: #1C1C1C;
+            --text-secondary: #4A4A4A;
+            --text-light: #767676;
             --white: #FFFFFF;
-            --border: #E0E0E0;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--background); color: var(--text); line-height: 1.7; }
-        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        header { padding: 24px 0; background: var(--white); border-bottom: 1px solid var(--border); }
-        .header-content { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 28px; font-weight: 600; text-decoration: none; color: var(--primary); }
-        nav { display: flex; gap: 24px; align-items: center; }
-        nav a { color: var(--text); text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s; }
-        nav a:hover { color: var(--primary); }
-        nav .icon-link { display: inline-flex; align-items: center; padding: 4px; }
-        nav .icon-link svg { display: block; }
-        main { padding: 60px 0; }
-        h1 { font-size: 48px; font-weight: 500; color: var(--text-dark); margin-bottom: 16px; }
-        .last-updated { font-size: 14px; color: var(--text-light); margin-bottom: 48px; }
-        h2 { font-size: 28px; font-weight: 500; color: var(--text-dark); margin: 48px 0 24px; }
-        h3 { font-size: 20px; font-weight: 600; color: var(--primary); margin: 32px 0 16px; }
-        p { font-size: 16px; line-height: 1.8; margin-bottom: 16px; }
-        ul { margin: 16px 0 16px 32px; }
-        li { margin-bottom: 12px; line-height: 1.7; }
-        strong { color: var(--text-dark); font-weight: 600; }
-        a { color: var(--primary); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .notice { background: #f0f7f3; padding: 24px; border-radius: 12px; border-left: 4px solid var(--primary); margin: 32px 0; }
-        footer { padding: 48px 0; text-align: center; background: var(--white); border-top: 1px solid var(--border); margin-top: 60px; }
-        footer p { font-size: 14px; color: var(--text-light); }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--text-primary); background: var(--cream); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; line-height: 1.25; }
+        a { color: var(--green-primary); text-decoration: none; border-bottom: 1px solid var(--sage-light); transition: border-color 0.2s ease; }
+        a:hover { border-bottom-color: var(--green-primary); }
+
+        header { background: rgba(250, 250, 247, 0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.04); position: fixed; top: 0; left: 0; right: 0; z-index: 100; }
+        .header-inner { max-width: 1120px; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 3rem); display: flex; align-items: center; justify-content: space-between; height: 72px; }
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; border: none; }
+        .logo img { width: 36px; height: 36px; border-radius: 8px; }
+        .logo-text { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.6rem; color: var(--green-deep); letter-spacing: -0.02em; }
+        .back-link { font-size: 0.9rem; color: var(--text-secondary); border: none; }
+        .back-link:hover { color: var(--green-primary); }
+
+        .content { max-width: 720px; margin: 0 auto; padding: clamp(7rem, 12vw, 9rem) clamp(1.25rem, 4vw, 3rem) 5rem; }
+        .content h1 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); color: var(--green-deep); margin-bottom: 0.5rem; }
+        .last-updated { font-size: 0.85rem; color: var(--text-light); margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--stone); }
+        .content h2 { font-size: 1.4rem; color: var(--green-deep); margin: 2.5rem 0 0.75rem; }
+        .content h3 { font-size: 1.05rem; color: var(--green-primary); margin: 1.75rem 0 0.5rem; font-family: 'DM Sans', sans-serif; font-weight: 600; }
+        .content p { font-size: 0.98rem; color: var(--text-secondary); margin-bottom: 0.75rem; }
+        .content ul { margin: 0.75rem 0 0.75rem 1.5rem; }
+        .content li { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0.5rem; line-height: 1.65; }
+        .content strong { color: var(--text-primary); font-weight: 600; }
+
+        .notice { background: var(--cream-warm); border-left: 3px solid var(--sage); padding: 1.25rem 1.5rem; border-radius: 0 8px 8px 0; margin: 1.25rem 0; }
+        .notice p { font-size: 0.95rem; margin-bottom: 0.5rem; }
+        .notice p:last-child { margin-bottom: 0; }
+
+        footer { background: var(--green-deep); color: rgba(250, 250, 247, 0.6); padding: 2.5rem 0; margin-top: 3rem; }
+        .footer-inner { max-width: 1120px; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 3rem); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.8rem; }
+        .footer-inner a { color: rgba(250, 250, 247, 0.4); border: none; margin-left: 1.5rem; }
+        .footer-inner a:hover { color: var(--cream); }
+        @media (max-width: 600px) { .footer-inner { flex-direction: column; text-align: center; } .footer-inner a { margin-left: 0; } }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html" class="logo">beó</a>
-                <nav>
-                    <a href="blog.html">lab notes</a>
-                    <a href="team.html">about</a>
-                    <a href="resources.html">resources</a>
-                    <a href="mailto:info@beo.llc" title="Contact us" class="icon-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></a>
-                </nav>
-            </div>
+        <div class="header-inner">
+            <a href="index.html" class="logo" aria-label="beó homepage">
+                <span class="logo-text">beó</span>
+            </a>
+            <a href="index.html" class="back-link">&larr; Home</a>
         </div>
     </header>
 
     <main>
-        <div class="container">
+        <div class="content">
             <h1>Privacy Policy</h1>
-            <p class="last-updated">Last updated: 3 February 2026</p>
+            <p class="last-updated">Last updated: 17 February 2026</p>
 
             <p>beó LLC ("we", "us", or "our") operates beo.llc and conducts digital wellbeing research. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or participate in our research.</p>
 
@@ -86,12 +91,14 @@
             </ul>
             <p>This information is processed via Formspree and stored securely. We use it solely to notify you when research launches and to send research-related updates.</p>
 
-            <p><strong>Analytics (if implemented):</strong> We may use Google Analytics to understand website traffic patterns. This collects anonymised data about page views, referral sources, and general visitor behaviour. You can opt out using browser extensions or Google's opt-out tools.</p>
+            <p><strong>Lawful basis:</strong> We process your email address on the basis of consent (Article 6(1)(a) UK GDPR). You give this consent by submitting the signup form. You can withdraw consent at any time by emailing <a href="mailto:lab@beo.llc">lab@beo.llc</a>.</p>
+
+            <p><strong>Analytics:</strong> We use Google Analytics to understand website traffic patterns. Analytics cookies are only set after you give consent via our cookie banner. This collects anonymised data about page views, referral sources, and general visitor behaviour. You can opt out using browser extensions or Google's opt-out tools. Lawful basis: consent (Article 6(1)(a) UK GDPR).</p>
 
             <h3>1.2 Research Participants</h3>
             <p><strong>Truly anonymous data:</strong> If you participate in our research study via the beó app, we collect:</p>
             <ul>
-                <li>Anonymous scores from the Bergen Social Media Addiction Scale (BSMAS)</li>
+                <li>Anonymous scores from validated scales</li>
                 <li>Anonymised perception gap data (estimated vs actual screen time)</li>
                 <li>Anonymous intervention completion patterns</li>
                 <li>Aggregated usage statistics</li>
@@ -99,10 +106,10 @@
 
             <p><strong>What we do NOT collect from research participants:</strong></p>
             <ul>
-                <li>❌ Names, email addresses, or contact information</li>
-                <li>❌ Device IDs, IP addresses, or location data</li>
-                <li>❌ Screenshots or specific content you view</li>
-                <li>❌ Any personally identifiable information</li>
+                <li>Names, email addresses, or contact information</li>
+                <li>Device IDs, IP addresses, or location data</li>
+                <li>Screenshots or specific content you view</li>
+                <li>Any personally identifiable information</li>
             </ul>
 
             <p>All research data stays on your phone. Only anonymous, aggregated statistics are shared with beó for research analysis.</p>
@@ -127,23 +134,22 @@
             <h2>3. Data Sharing and Disclosure</h2>
 
             <p>We do not sell, trade, rent, or share your personal information with third parties, except:</p>
-
             <ul>
-                <li><strong>Service providers:</strong> Formspree (email collection), Google Analytics (if used) – subject to their privacy policies</li>
+                <li><strong>Service providers:</strong> Formspree (email collection), Google Analytics (if used), subject to their privacy policies</li>
                 <li><strong>Legal requirements:</strong> If required by law, court order, or government regulation</li>
                 <li><strong>Research publication:</strong> Anonymous, aggregated research findings may be published in academic journals or shared publicly</li>
             </ul>
 
             <p><strong>We explicitly do NOT:</strong></p>
             <ul>
-                <li>❌ Sell your data to advertisers or data brokers</li>
-                <li>❌ Share individual research data with third parties</li>
-                <li>❌ Use your data for targeted advertising</li>
+                <li>Sell your data to advertisers or data brokers</li>
+                <li>Share individual research data with third parties</li>
+                <li>Use your data for targeted advertising</li>
             </ul>
 
             <h2>4. Data Storage and Security</h2>
 
-            <p><strong>Website signups:</strong> Email addresses are stored securely via Formspree (USA-based, GDPR compliant) and our own secure systems.</p>
+            <p><strong>Website signups:</strong> Email addresses are stored securely via Formspree (USA-based). International transfers are protected by Standard Contractual Clauses.</p>
 
             <p><strong>Research data:</strong> Your individual research data stays on your phone. Only anonymous, aggregated statistics are transmitted to our secure servers. We use industry-standard encryption and security practices.</p>
 
@@ -172,11 +178,11 @@
 
             <p>beó LLC is based in Wyoming, USA. If you are accessing our website or participating in research from outside the United States, your information may be transferred to, stored, and processed in the USA or other countries where our service providers operate.</p>
 
-            <p>We comply with applicable data protection regulations, including GDPR for EU residents and equivalent standards globally.</p>
+            <p>International transfers of personal data from the UK are protected by Standard Contractual Clauses (SCCs) as approved by the UK Information Commissioner's Office. We comply with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.</p>
 
             <h2>7. Research Ethics</h2>
 
-            <p>Our research follows the British Psychological Society Code of Human Research Ethics. Key principles:</p>
+            <p>Our research is guided by the principles of the British Psychological Society Code of Human Research Ethics. Key principles:</p>
             <ul>
                 <li><strong>Voluntary participation:</strong> You can stop participating at any time</li>
                 <li><strong>Informed consent:</strong> You'll be informed about what data is collected before participating</li>
@@ -216,7 +222,7 @@
 
             <h2>12. Governing Law</h2>
 
-            <p>This Privacy Policy is governed by the laws of the State of Wyoming, United States. For EU residents, this policy also complies with GDPR requirements.</p>
+            <p>This Privacy Policy is governed by the laws of the State of Wyoming, United States. For UK residents, this policy also complies with the UK GDPR and the Data Protection Act 2018.</p>
 
             <div class="notice">
                 <p><strong>Summary:</strong> We take your privacy seriously. Website signups are minimal (email only), research data is truly anonymous (no way to identify you), and we don't sell your data to anyone. Simple.</p>
@@ -225,9 +231,14 @@
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2026 beó | <a href="index.html">Home</a> | <a href="terms.html">Terms</a></p>
+        <div class="footer-inner">
+            <span>&copy; 2026 beó LLC</span>
+            <div>
+                <a href="terms.html">Terms</a>
+                <a href="index.html">Home</a>
+            </div>
         </div>
     </footer>
+<script src="assets/cookies.js"></script>
 </body>
 </html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Participant Information Sheet for the beóLAB Flourish study.">
+    <title>Participant Information Sheet | beóLAB Flourish</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <meta property="og:title" content="Participant Information Sheet | beóLAB Flourish">
+    <meta property="og:description" content="Information for participants in the beóLAB Flourish digital wellbeing research study.">
+    <meta property="og:image" content="https://beo.llc/og-image.png">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-deep: #1B4332;
+            --green-primary: #2D5A27;
+            --green-muted: #3A7D32;
+            --sage: #8E9F8E;
+            --sage-light: #C2CEC2;
+            --cream: #FAFAF7;
+            --cream-warm: #F5F3EE;
+            --stone: #E8E6E1;
+            --text-primary: #1C1C1C;
+            --text-secondary: #4A4A4A;
+            --text-light: #767676;
+            --white: #FFFFFF;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-primary);
+            background: var(--cream);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Instrument Serif', Georgia, serif;
+            font-weight: 400;
+            line-height: 1.25;
+        }
+
+        a {
+            color: var(--green-primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--sage-light);
+            transition: border-color 0.2s ease;
+        }
+
+        a:hover { border-bottom-color: var(--green-primary); }
+
+        /* Header */
+        header {
+            background: rgba(250, 250, 247, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,0.04);
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 clamp(1.25rem, 4vw, 3rem);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            border: none;
+        }
+
+        .logo img {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+        }
+
+        .logo-text {
+            font-family: 'Instrument Serif', Georgia, serif;
+            font-size: 1.6rem;
+            color: var(--green-deep);
+            letter-spacing: -0.02em;
+        }
+
+        .back-link {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            border: none;
+        }
+
+        .back-link:hover { color: var(--green-primary); }
+
+        /* Content */
+        .pis-container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: clamp(7rem, 12vw, 9rem) clamp(1.25rem, 4vw, 3rem) 5rem;
+        }
+
+        .pis-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 1rem;
+        }
+
+        .pis-container h1 {
+            font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+            color: var(--green-deep);
+            margin-bottom: 0.5rem;
+        }
+
+        .pis-subtitle {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--stone);
+        }
+
+        .pis-section {
+            margin-bottom: 2.25rem;
+        }
+
+        .pis-section h2 {
+            font-size: 1.3rem;
+            color: var(--green-deep);
+            margin-bottom: 0.75rem;
+        }
+
+        .pis-section p {
+            font-size: 0.98rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+            max-width: none;
+        }
+
+        .pis-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight-box {
+            background: var(--cream-warm);
+            border-left: 3px solid var(--sage);
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.25rem 0;
+        }
+
+        .highlight-box p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-block {
+            background: var(--white);
+            border: 1px solid var(--stone);
+            border-radius: 10px;
+            padding: 1.5rem 1.75rem;
+            margin-top: 2.5rem;
+        }
+
+        .contact-block h2 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-block p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.4rem;
+        }
+
+        .version-info {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--stone);
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--green-deep);
+            color: rgba(250, 250, 247, 0.6);
+            padding: 2.5rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 clamp(1.25rem, 4vw, 3rem);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.8rem;
+        }
+
+        .footer-inner a {
+            color: rgba(250, 250, 247, 0.4);
+            border: none;
+            margin-left: 1.5rem;
+        }
+
+        .footer-inner a:hover {
+            color: var(--cream);
+        }
+
+        @media (max-width: 600px) {
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-inner a { margin-left: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <a href="index.html" class="logo" aria-label="beó homepage">
+            <span class="logo-text">beó</span>
+        </a>
+        <a href="index.html#lab" class="back-link">&larr; Back to research</a>
+    </div>
+</header>
+
+<main>
+    <div class="pis-container">
+        <span class="pis-label">beóLAB Flourish</span>
+        <h1>Participant Information Sheet</h1>
+        <p class="pis-subtitle">Please read this information carefully before deciding whether to take part. You are welcome to discuss it with others and to ask us questions.</p>
+
+        <div class="pis-section">
+            <h2>What is this study about?</h2>
+            <p>We are investigating whether simple daily reconnection habits (such as breathing exercises, brief movement, nature connection, and sensory activities) can help people feel more in control of their relationship with technology.</p>
+            <p>This is a pre-registered exploratory study. We have published our hypotheses on the <a href="https://doi.org/10.17605/OSF.IO/4RS7C" target="_blank" rel="noopener">Open Science Framework</a> before data collection, and we will publish our findings regardless of the outcome.</p>
+        </div>
+
+        <div class="pis-section">
+            <h2>Who is conducting this research?</h2>
+            <p>This study is conducted by beóLAB, the research arm of beó LLC. The principal investigator is Julie Hendry FBCS FRSA, who holds an MSc in Psychology (Distinction) from the University of Strathclyde. The study is guided by the principles of the British Psychological Society Code of Human Research Ethics.</p>
+        </div>
+
+        <div class="pis-section">
+            <h2>Who can take part?</h2>
+            <p>Anyone aged 18 or over who owns a smartphone and is curious about their relationship with technology. You do not need to feel you have a "problem" with your phone. We are interested in the full range of experiences. You will need an iPhone to participate, as the app is currently available on iOS only.</p>
+        </div>
+
+        <div class="pis-section">
+            <h2>What will I be asked to do?</h2>
+            <p>If you choose to take part, you will download the beóLAB Flourish app from TestFlight (Apple's testing platform). The study lasts four weeks and involves the following.</p>
+            <div class="highlight-box">
+                <p><strong>At the start:</strong> You will answer a few brief demographic questions (age range, gender) and complete 5 baseline questions about your current relationship with technology. This takes approximately 3 minutes.</p>
+                <p><strong>Each day:</strong> The app will suggest a brief reconnection habit (such as a breathing exercise, a short walk, or a moment of nature connection). These take between 30 seconds and 5 minutes. You choose whether to try them.</p>
+                <p><strong>Each week:</strong> You will answer one question about how in control you felt that week. This takes less than 30 seconds.</p>
+                <p><strong>At the end (week 4):</strong> You will complete the same 5 baseline questions again so we can measure any change. This takes approximately 2 minutes.</p>
+            </div>
+            <p>Total time commitment over four weeks is approximately 15 to 30 minutes, depending on how many microhabits you choose to try.</p>
+        </div>
+
+        <div class="pis-section">
+            <h2>Do I have to take part?</h2>
+            <p>No. Participation is entirely voluntary. You can stop using the app at any time without giving a reason. Withdrawing will not affect you in any way.</p>
+        </div>
+
+        <div class="pis-section">
+            <h2>What data will you collect?</h2>
+            <p>We collect the minimum data needed for the research. Specifically, we collect which microhabits you tried (recorded as anonymous events, not linked to your identity), your weekly perceived control rating (a number from 0 to 10), your baseline and end-of-study questionnaire responses, and aggregate usage patterns (such as how many days you opened the app).</p>
+            <p>All research data is associated with a randomly generated participant ID, not your name or email. Your email address is used only to send you the TestFlight invitation and is deleted from our signup records once you are enrolled in the study.</p>
+        </div>
+
+        <div class="pis-section">
+            <h2>How will my data be stored and protected?</h2>
+            <p>Research data is stored securely and processed in compliance with the UK General Data Protection Regulation (UK GDPR). The lawful basis for processing is legitimate interest (scientific research). We follow the principle of data minimisation: we collect only what is necessary and anonymise it as early as possible.</p>
+            <p>Anonymised research data may be shared alongside published findings, in line with open science principles. No individual participant will be identifiable in any published output.</p>
+        </div>
+
+        <div class="pis-section">
+            <h2>Can I withdraw my data?</h2>
+            <p>Before your email is deleted and your data is fully anonymised, you can contact us to request deletion of all your data. After anonymisation, we will not be able to identify which data is yours, as this is an intentional privacy protection. You can stop participating at any point by simply not using the app.</p>
+        </div>
+
+        <div class="pis-section">
+            <h2>Are there any risks?</h2>
+            <p>This study involves only low-risk activities (brief breathing exercises, short walks, sensory awareness). The questionnaires ask about your general sense of control over technology, not about distressing topics. If any aspect of the study causes you concern, you are free to stop at any time.</p>
+        </div>
+
+        <div class="pis-section">
+            <h2>What are the potential benefits?</h2>
+            <p>You may find that some of the reconnection habits are helpful in your daily life. You will be contributing to research that aims to understand how people can feel more in control of their relationship with technology. We cannot guarantee any personal benefit from taking part.</p>
+        </div>
+
+        <div class="pis-section">
+            <h2>What will happen to the results?</h2>
+            <p>We plan to publish initial findings by Easter 2026. Results will be shared on the beó website, submitted for academic publication, and may be presented at conferences. All published findings will be based on anonymised, aggregate data. No individual participant will be identifiable.</p>
+            <p>Our study design is pre-registered on the <a href="https://doi.org/10.17605/OSF.IO/4RS7C" target="_blank" rel="noopener">Open Science Framework</a>, which means our hypotheses were made public before data collection began. We will report what we find, including null or unexpected results.</p>
+        </div>
+
+        <div class="pis-section">
+            <h2>What happens when the study ends?</h2>
+            <p>At the end of the four-week study, you will receive a debrief within the app explaining what the study was investigating, what we expected to find, and how your participation contributed. You will also be able to see a summary of your own responses over the four weeks.</p>
+            <p>When we publish findings (target: Easter 2026), a summary written in plain language will be posted on the beó website and shared with all participants who signed up via email. If you have questions after the study ends, you can contact the principal investigator at <a href="mailto:lab@beo.llc">lab@beo.llc</a>.</p>
+        </div>
+
+        <div class="pis-section">
+            <h2>Ethical review</h2>
+            <p>This study is guided by the principles of the British Psychological Society Code of Human Research Ethics. It has not been formally reviewed by a BPS ethics committee. If you have concerns about the conduct of this research, you may contact the principal investigator at the address below.</p>
+        </div>
+
+        <div class="contact-block">
+            <h2>Questions or concerns?</h2>
+            <p>Principal Investigator: Julie Hendry FBCS FRSA</p>
+            <p>Email: <a href="mailto:lab@beo.llc">lab@beo.llc</a></p>
+            <p>Organisation: beóLAB, the research arm of beó LLC</p>
+            <p>Website: <a href="https://beo.llc">beo.llc</a></p>
+        </div>
+
+        <div class="version-info">
+            <p>Version 1.1 · 17 February 2026</p>
+            <p>Pre-registration: <a href="https://doi.org/10.17605/OSF.IO/4RS7C" target="_blank" rel="noopener" style="color: var(--text-light);">OSF.IO/4RS7C</a></p>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <span>&copy; 2026 beó LLC</span>
+        <div>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="index.html">Home</a>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/cookies.js"></script>
+</body>
+</html>

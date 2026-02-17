@@ -3,512 +3,493 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources – beó</title>
+    <title>Resources | beó</title>
     <meta name="description" content="Books, channels, apps and research on digital wellbeing. Whether beó helps you or not, these resources might.">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Digital Wellbeing Resources – beó">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <meta property="og:title" content="Digital Wellbeing Resources | beó">
     <meta property="og:description" content="Books, channels, apps and research we recommend. Whether beó helps you or not, these might.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://beo.llc/resources.html">
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9KPL21EX4E"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-9KPL21EX4E');
-    </script>
+    <meta property="og:image" content="https://beo.llc/og-image.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #3D6B4A; --primary-dark: #2D5A3D; --background: #F5F5F3; --text-dark: #1A1A1A; --text: #4A4A4A; --text-light: #7A7A7A; --text-muted: #9A9A9A; --white: #FFFFFF; --border: #E0E0E0; }
+        :root {
+            --green-deep: #1B4332;
+            --green-primary: #2D5A27;
+            --green-muted: #3A7D32;
+            --sage: #8E9F8E;
+            --sage-light: #C2CEC2;
+            --cream: #FAFAF7;
+            --cream-warm: #F5F3EE;
+            --stone: #E8E6E1;
+            --text-primary: #1C1C1C;
+            --text-secondary: #4A4A4A;
+            --text-light: #767676;
+            --white: #FFFFFF;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--background); color: var(--text); line-height: 1.6; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-        header { padding: 24px 0; background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
-        .header-content { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 28px; font-weight: 600; text-decoration: none; color: var(--primary); }
-        nav { display: flex; gap: 24px; align-items: center; }
-        nav a { color: var(--text); text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s; }
-        nav a:hover { color: var(--primary); }
-        nav .icon-link { display: inline-flex; align-items: center; padding: 4px; }
-        nav .icon-link svg { display: block; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--text-primary); background: var(--cream); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; line-height: 1.25; }
+        a { color: var(--green-primary); text-decoration: none; border-bottom: 1px solid var(--sage-light); transition: border-color 0.2s ease; }
+        a:hover { border-bottom-color: var(--green-primary); }
 
-        .hero { padding: 80px 0 40px; text-align: center; }
-        .hero h1 { font-size: 42px; font-weight: 500; color: var(--text-dark); margin-bottom: 16px; }
-        .hero p { font-size: 18px; color: var(--text-light); max-width: 600px; margin: 0 auto; }
+        header { background: rgba(250, 250, 247, 0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.04); position: fixed; top: 0; left: 0; right: 0; z-index: 100; }
+        .header-inner { max-width: 1120px; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 3rem); display: flex; align-items: center; justify-content: space-between; height: 72px; }
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; border: none; }
+        .logo img { width: 36px; height: 36px; border-radius: 8px; }
+        .logo-text { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.6rem; color: var(--green-deep); letter-spacing: -0.02em; }
+        nav { display: flex; align-items: center; gap: clamp(1.2rem, 3vw, 2.2rem); }
+        nav a { font-size: 0.9rem; color: var(--text-secondary); border: none; position: relative; }
+        nav a::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 1.5px; background: var(--green-primary); transition: width 0.25s ease; }
+        nav a:hover::after { width: 100%; }
+        nav a.active { color: var(--green-primary); }
+        .nav-cta { background: var(--green-deep); color: var(--cream) !important; padding: 8px 20px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; transition: background 0.2s ease; }
+        .nav-cta:hover { background: var(--green-primary); }
+        .nav-cta::after { display: none; }
 
-        .resources-section { padding: 60px 0; }
-        .resources-section:nth-child(odd) { background: var(--white); }
-        .resources-section h2 { font-size: 28px; font-weight: 500; color: var(--text-dark); margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
-        .resources-section h2 .emoji { font-size: 32px; }
-        .resources-section .section-intro { font-size: 15px; color: var(--text-light); margin-bottom: 24px; }
+        .container { max-width: 1120px; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 3rem); }
 
-        /* Carousel styles */
-        .carousel-wrapper { position: relative; margin: 0 -24px; padding: 0 24px; }
-        .carousel { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding: 8px 0 24px; scrollbar-width: none; }
+        .page-header { padding: clamp(8rem, 16vw, 11rem) 0 clamp(3rem, 6vw, 5rem); }
+        .page-header h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--green-deep); margin-bottom: 1rem; }
+        .page-header p { font-size: 1.1rem; color: var(--text-secondary); max-width: 600px; }
+
+        .section { padding: clamp(2.5rem, 5vw, 4rem) 0; }
+        .section + .section { border-top: 1px solid var(--stone); }
+        .section h2 { font-size: clamp(1.3rem, 2.5vw, 1.6rem); color: var(--green-deep); margin-bottom: 0.5rem; }
+        .section-intro { font-size: 0.9rem; color: var(--text-light); margin-bottom: 1.25rem; }
+        .scroll-hint { font-size: 0.75rem; color: var(--sage); margin-bottom: 0.5rem; text-align: right; }
+
+        .carousel { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding: 4px 0 1.5rem; scrollbar-width: none; }
         .carousel::-webkit-scrollbar { display: none; }
-        .carousel-hint { font-size: 13px; color: var(--text-muted); text-align: right; margin-bottom: 8px; }
 
-        .resource-card { flex: 0 0 280px; scroll-snap-align: start; background: var(--background); padding: 24px; border-radius: 12px; transition: transform 0.2s, box-shadow 0.2s; }
-        .resources-section:nth-child(odd) .resource-card { background: var(--background); }
-        .resources-section:nth-child(even) .resource-card { background: var(--white); }
-        .resource-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-        .resource-card h3 { font-size: 17px; font-weight: 600; color: var(--text-dark); margin-bottom: 6px; }
-        .resource-card .author { font-size: 13px; color: var(--primary); font-weight: 500; margin-bottom: 10px; }
-        .resource-card p { font-size: 13px; color: var(--text); line-height: 1.5; margin-bottom: 12px; min-height: 60px; }
-        .resource-card .link { font-size: 13px; color: var(--primary); text-decoration: none; font-weight: 500; }
-        .resource-card .link:hover { text-decoration: underline; }
-        .resource-card .tag { display: inline-block; font-size: 10px; background: var(--primary); color: white; padding: 3px 6px; border-radius: 4px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
-        .resource-card .tag.adhd { background: #7B68EE; }
-        .resource-card .tag.free { background: #4CAF50; }
-        .resource-card .tag.research { background: #2196F3; }
-        .resource-card .tag.popular { background: #FF7043; }
-        .resource-card .tag.uk { background: #1976D2; }
+        .card { flex: 0 0 260px; scroll-snap-align: start; background: var(--white); padding: 1.5rem; border-radius: 10px; border: 1px solid rgba(0,0,0,0.04); transition: box-shadow 0.3s ease; }
+        .card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+        .card h3 { font-size: 1rem; color: var(--green-deep); margin-bottom: 0.25rem; font-family: 'DM Sans', sans-serif; font-weight: 600; }
+        .card .author { font-size: 0.8rem; color: var(--green-primary); font-weight: 500; margin-bottom: 0.5rem; }
+        .card p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.55; margin-bottom: 0.75rem; min-height: 52px; }
+        .card .link { font-size: 0.82rem; font-weight: 500; color: var(--green-primary); border-bottom: 1px solid var(--sage-light); }
+        .card .link:hover { border-bottom-color: var(--green-primary); }
 
-        .disclaimer { padding: 60px 0; text-align: center; }
-        .disclaimer p { font-size: 14px; color: var(--text-light); max-width: 600px; margin: 0 auto; line-height: 1.7; }
+        .tag { display: inline-block; font-size: 0.65rem; padding: 2px 6px; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 500; margin-bottom: 0.5rem; margin-right: 4px; }
+        .tag.popular { background: rgba(255, 112, 67, 0.1); color: #D4572A; }
+        .tag.adhd { background: rgba(123, 104, 238, 0.1); color: #5B48C8; }
+        .tag.free { background: rgba(45, 90, 39, 0.1); color: var(--green-primary); }
+        .tag.research { background: rgba(33, 150, 243, 0.1); color: #1976D2; }
+        .tag.uk { background: rgba(25, 118, 210, 0.1); color: #1565C0; }
 
-        footer { padding: 48px 0; text-align: center; background: var(--background); border-top: 1px solid var(--border); }
-        footer p { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
-        footer .enterprise { font-size: 13px; color: var(--text); margin: 8px 0; }
-        footer .enterprise a { color: var(--primary); text-decoration: none; font-weight: 600; }
-        footer nav { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-top: 16px; }
-        footer nav a { font-size: 13px; color: var(--text); text-decoration: none; }
-        footer nav a:hover { color: var(--primary); }
+        .disclaimer { padding: 3rem 0; max-width: 600px; }
+        .disclaimer p { font-size: 0.85rem; color: var(--text-light); line-height: 1.7; }
 
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 32px; }
-            .resources-section h2 { font-size: 24px; }
-            nav { gap: 16px; }
-            nav a { font-size: 14px; }
-            nav .icon-link svg { width: 16px; height: 16px; }
-            .resource-card { flex: 0 0 260px; }
+        footer { background: var(--green-deep); color: rgba(250, 250, 247, 0.6); padding: 2.5rem 0; }
+        .footer-inner { max-width: 1120px; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 3rem); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.8rem; }
+        .footer-inner a { color: rgba(250, 250, 247, 0.4); border: none; margin-left: 1.5rem; }
+        .footer-inner a:hover { color: var(--cream); }
+
+        @media (max-width: 680px) {
+            .card { flex: 0 0 240px; }
+            .footer-inner { flex-direction: column; text-align: center; }
+            .footer-inner a { margin-left: 0; }
+            header nav a:not(.nav-cta) { display: none; }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html" class="logo">beó</a>
-                <nav>
-                    <a href="blog.html">lab notes</a>
-                    <a href="team.html">about</a>
-                    <a href="resources.html" style="color: var(--primary);">resources</a>
-                    <a href="mailto:info@beo.llc" title="Contact us" class="icon-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></a>
-                </nav>
-            </div>
+        <div class="header-inner">
+            <a href="index.html" class="logo" aria-label="beó homepage">
+                <span class="logo-text">beó</span>
+            </a>
+            <nav aria-label="Main navigation">
+                <a href="index.html#measure">Measure</a>
+                <a href="index.html#lab">Research</a>
+                <a href="team.html">Team</a>
+                <a href="https://calendly.com/juliehendry/30min" target="_blank" rel="noopener" class="nav-cta">Book a call</a>
+            </nav>
         </div>
     </header>
 
-    <section class="hero">
+    <main>
         <div class="container">
-            <h1>Resources we recommend</h1>
-            <p>Whether beó helps you or not, these books, channels, apps and research might. We're not trying to be the only answer.</p>
-        </div>
-    </section>
+            <div class="page-header">
+                <h1>Resources we recommend</h1>
+                <p>Whether beó helps you or not, these books, channels, apps and research might. We're not trying to be the only answer.</p>
+            </div>
 
-    <section class="resources-section">
-        <div class="container">
-            <h2><span class="emoji">📚</span> Books</h2>
-            <p class="section-intro">The essential reading on attention, focus, and digital life. Mix of research-backed and practical.</p>
-            <p class="carousel-hint">Scroll →</p>
-            <div class="carousel-wrapper">
+            <div class="section">
+                <h2>Books</h2>
+                <p class="section-intro">The essential reading on attention, focus, and digital life. Mix of research-backed and practical.</p>
+                <p class="scroll-hint">Scroll &rarr;</p>
                 <div class="carousel">
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag popular">Bestseller</span>
                         <h3>Digital Minimalism</h3>
                         <div class="author">Cal Newport</div>
                         <p>A philosophy for technology use. Not anti-tech, but intentional. Newport argues for choosing tools that support your values.</p>
-                        <a href="https://www.calnewport.com/books/digital-minimalism/" target="_blank" rel="noopener" class="link">Learn more →</a>
+                        <a href="https://www.calnewport.com/books/digital-minimalism/" target="_blank" rel="noopener" class="link">Learn more &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag popular">Bestseller</span>
                         <h3>Stolen Focus</h3>
                         <div class="author">Johann Hari</div>
-                        <p>Why we can't pay attention anymore. Hari investigates systemic causes of the attention crisis - not just blaming individuals.</p>
-                        <a href="https://stolenfocusbook.com/" target="_blank" rel="noopener" class="link">Learn more →</a>
+                        <p>Why we can't pay attention anymore. Hari investigates systemic causes of the attention crisis, not just blaming individuals.</p>
+                        <a href="https://stolenfocusbook.com/" target="_blank" rel="noopener" class="link">Learn more &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <h3>Indistractable</h3>
                         <div class="author">Nir Eyal</div>
                         <p>From the author of Hooked (how products capture attention), this book offers the antidote: becoming indistractable.</p>
-                        <a href="https://www.nirandfar.com/indistractable/" target="_blank" rel="noopener" class="link">Learn more →</a>
+                        <a href="https://www.nirandfar.com/indistractable/" target="_blank" rel="noopener" class="link">Learn more &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <h3>How to Break Up with Your Phone</h3>
                         <div class="author">Catherine Price</div>
                         <p>A 30-day plan to take back your life. Practical, science-based, and compassionate. Good starting point for beginners.</p>
-                        <a href="https://www.catherineprice.com/books" target="_blank" rel="noopener" class="link">Learn more →</a>
+                        <a href="https://www.catherineprice.com/books" target="_blank" rel="noopener" class="link">Learn more &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <h3>Deep Work</h3>
                         <div class="author">Cal Newport</div>
                         <p>Rules for focused success in a distracted world. How to cultivate the ability to focus without distraction on cognitively demanding tasks.</p>
-                        <a href="https://www.calnewport.com/books/deep-work/" target="_blank" rel="noopener" class="link">Learn more →</a>
+                        <a href="https://www.calnewport.com/books/deep-work/" target="_blank" rel="noopener" class="link">Learn more &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <h3>The Shallows</h3>
                         <div class="author">Nicholas Carr</div>
                         <p>What the Internet is doing to our brains. Pulitzer Prize finalist exploring how online browsing affects cognition and memory.</p>
-                        <a href="https://www.nicholascarr.com/?page_id=16" target="_blank" rel="noopener" class="link">Learn more →</a>
+                        <a href="https://www.nicholascarr.com/?page_id=16" target="_blank" rel="noopener" class="link">Learn more &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag adhd">ADHD</span>
                         <h3>Taking Charge of Adult ADHD</h3>
                         <div class="author">Russell Barkley</div>
                         <p>The definitive guide from a leading researcher. Evidence-based strategies that actually work for managing adult ADHD.</p>
-                        <a href="https://www.guilford.com/books/Taking-Charge-of-Adult-ADHD/Russell-Barkley/9781462546855" target="_blank" rel="noopener" class="link">Learn more →</a>
+                        <a href="https://www.guilford.com/books/Taking-Charge-of-Adult-ADHD/Russell-Barkley/9781462546855" target="_blank" rel="noopener" class="link">Learn more &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag adhd">ADHD</span>
                         <h3>Driven to Distraction</h3>
-                        <div class="author">Hallowell & Ratey</div>
+                        <div class="author">Hallowell &amp; Ratey</div>
                         <p>Classic introduction that helped millions understand ADHD. Compassionate, practical, and still relevant decades later.</p>
-                        <a href="https://drhallowell.com/books/" target="_blank" rel="noopener" class="link">Learn more →</a>
+                        <a href="https://drhallowell.com/books/" target="_blank" rel="noopener" class="link">Learn more &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag adhd">ADHD</span>
                         <h3>ADHD 2.0</h3>
-                        <div class="author">Hallowell & Ratey</div>
+                        <div class="author">Hallowell &amp; Ratey</div>
                         <p>Updated guide with new science on ADHD including the cerebellum connection. Fresh strategies for thriving with ADHD.</p>
-                        <a href="https://drhallowell.com/books/" target="_blank" rel="noopener" class="link">Learn more →</a>
+                        <a href="https://drhallowell.com/books/" target="_blank" rel="noopener" class="link">Learn more &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <h3>Irresistible</h3>
                         <div class="author">Adam Alter</div>
                         <p>The rise of addictive technology. NYU professor explores why we're hooked and what we can do about it.</p>
-                        <a href="https://www.adamalterauthor.com/irresistible" target="_blank" rel="noopener" class="link">Learn more →</a>
+                        <a href="https://www.adamalterauthor.com/irresistible" target="_blank" rel="noopener" class="link">Learn more &rarr;</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section class="resources-section">
-        <div class="container">
-            <h2><span class="emoji">📺</span> YouTube Channels</h2>
-            <p class="section-intro">Free, high-quality content from experts and creators. Great for learning at your own pace.</p>
-            <p class="carousel-hint">Scroll →</p>
-            <div class="carousel-wrapper">
+            <div class="section">
+                <h2>YouTube Channels</h2>
+                <p class="section-intro">Free, high-quality content from experts and creators. Great for learning at your own pace.</p>
+                <p class="scroll-hint">Scroll &rarr;</p>
                 <div class="carousel">
-                    <div class="resource-card">
-                        <span class="tag adhd">ADHD</span>
-                        <span class="tag popular">2M+ subs</span>
+                    <div class="card">
+                        <span class="tag adhd">ADHD</span><span class="tag popular">2M+ subs</span>
                         <h3>How to ADHD</h3>
                         <div class="author">Jessica McCabe</div>
                         <p>Brilliant, research-backed content about living with ADHD. Jessica explains complex topics with warmth, humour and clarity.</p>
-                        <a href="https://www.youtube.com/@HowtoADHD" target="_blank" rel="noopener" class="link">Watch →</a>
+                        <a href="https://www.youtube.com/@HowtoADHD" target="_blank" rel="noopener" class="link">Watch &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag popular">6M+ subs</span>
                         <h3>HealthyGamerGG</h3>
                         <div class="author">Dr. Alok Kanojia</div>
                         <p>Harvard psychiatrist on mental health, gaming, tech and ADHD. Deep, nuanced conversations that actually help.</p>
-                        <a href="https://www.youtube.com/@HealthyGamerGG" target="_blank" rel="noopener" class="link">Watch →</a>
+                        <a href="https://www.youtube.com/@HealthyGamerGG" target="_blank" rel="noopener" class="link">Watch &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag popular">3M+ subs</span>
                         <h3>Matt D'Avella</h3>
-                        <div class="author">Filmmaker & minimalist</div>
+                        <div class="author">Filmmaker &amp; minimalist</div>
                         <p>Documentaries and experiments on minimalism, habits, and intentional living. Beautifully produced, thoughtful content.</p>
-                        <a href="https://www.youtube.com/@MattDAvella" target="_blank" rel="noopener" class="link">Watch →</a>
+                        <a href="https://www.youtube.com/@MattDAvella" target="_blank" rel="noopener" class="link">Watch &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag popular">6M+ subs</span>
                         <h3>Huberman Lab</h3>
                         <div class="author">Dr. Andrew Huberman</div>
                         <p>Stanford neuroscientist on how our brains work. Episodes on dopamine, focus, sleep, and habit formation.</p>
-                        <a href="https://www.youtube.com/@hubaboratorylab" target="_blank" rel="noopener" class="link">Watch →</a>
+                        <a href="https://www.youtube.com/@hubaboratorylab" target="_blank" rel="noopener" class="link">Watch &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag adhd">ADHD</span>
                         <h3>ADHD Jesse</h3>
                         <div class="author">Jesse J. Anderson</div>
                         <p>Practical ADHD tips from someone who lives it. Focus on tools, systems, and strategies that work.</p>
-                        <a href="https://www.youtube.com/@adhdjesse" target="_blank" rel="noopener" class="link">Watch →</a>
+                        <a href="https://www.youtube.com/@adhdjesse" target="_blank" rel="noopener" class="link">Watch &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <h3>Ali Abdaal</h3>
-                        <div class="author">Doctor & productivity expert</div>
+                        <div class="author">Doctor &amp; productivity expert</div>
                         <p>Evidence-based productivity, studying, and work-life balance. Practical without being preachy.</p>
-                        <a href="https://www.youtube.com/@aliabdaal" target="_blank" rel="noopener" class="link">Watch →</a>
+                        <a href="https://www.youtube.com/@aliabdaal" target="_blank" rel="noopener" class="link">Watch &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <h3>Thomas Frank</h3>
-                        <div class="author">Productivity & learning</div>
+                        <div class="author">Productivity &amp; learning</div>
                         <p>Study tips, productivity systems, and learning strategies. Great for students and knowledge workers.</p>
-                        <a href="https://www.youtube.com/@Thomasfrank" target="_blank" rel="noopener" class="link">Watch →</a>
+                        <a href="https://www.youtube.com/@Thomasfrank" target="_blank" rel="noopener" class="link">Watch &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag free">Free course</span>
                         <h3>The Science of Well-Being</h3>
                         <div class="author">Yale / Coursera</div>
                         <p>Yale's most popular course, free online. What actually makes us happy (spoiler: not more screen time).</p>
-                        <a href="https://www.coursera.org/learn/the-science-of-well-being" target="_blank" rel="noopener" class="link">Take course →</a>
+                        <a href="https://www.coursera.org/learn/the-science-of-well-being" target="_blank" rel="noopener" class="link">Take course &rarr;</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section class="resources-section">
-        <div class="container">
-            <h2><span class="emoji">📱</span> Other Apps</h2>
-            <p class="section-intro">Different approaches work for different people. These apps complement or offer alternatives to beó.</p>
-            <p class="carousel-hint">Scroll →</p>
-            <div class="carousel-wrapper">
+            <div class="section">
+                <h2>Other Apps</h2>
+                <p class="section-intro">Different approaches work for different people. These apps complement or offer alternatives to beó.</p>
+                <p class="scroll-hint">Scroll &rarr;</p>
                 <div class="carousel">
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag popular">40M+ users</span>
                         <h3>Forest</h3>
                         <div class="author">Gamified focus</div>
                         <p>Plant virtual trees while you focus. Trees die if you leave the app. Gentle gamification some find motivating.</p>
-                        <a href="https://www.forestapp.cc/" target="_blank" rel="noopener" class="link">Try it →</a>
+                        <a href="https://www.forestapp.cc/" target="_blank" rel="noopener" class="link">Try it &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <h3>Opal</h3>
                         <div class="author">App blocking</div>
-                        <p>Blocks distracting apps at system level. More restrictive approach - helpful if you need harder boundaries.</p>
-                        <a href="https://www.opal.so/" target="_blank" rel="noopener" class="link">Try it →</a>
+                        <p>Blocks distracting apps at system level. More restrictive approach, helpful if you need harder boundaries.</p>
+                        <a href="https://www.opal.so/" target="_blank" rel="noopener" class="link">Try it &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <h3>one sec</h3>
                         <div class="author">Friction-based</div>
                         <p>Adds a breathing pause before opening apps. Research shows tiny delays reduce impulsive behaviour.</p>
-                        <a href="https://one-sec.app/" target="_blank" rel="noopener" class="link">Try it →</a>
+                        <a href="https://one-sec.app/" target="_blank" rel="noopener" class="link">Try it &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <h3>Freedom</h3>
                         <div class="author">Cross-platform blocking</div>
                         <p>Block distracting websites and apps across all your devices. Good for serious focus sessions.</p>
-                        <a href="https://freedom.to/" target="_blank" rel="noopener" class="link">Try it →</a>
+                        <a href="https://freedom.to/" target="_blank" rel="noopener" class="link">Try it &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <h3>Cold Turkey</h3>
                         <div class="author">Strict blocking</div>
                         <p>The strictest blocker available. Once locked, even tech-savvy users can't bypass it. Nuclear option.</p>
-                        <a href="https://getcoldturkey.com/" target="_blank" rel="noopener" class="link">Try it →</a>
+                        <a href="https://getcoldturkey.com/" target="_blank" rel="noopener" class="link">Try it &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag popular">70M+ users</span>
                         <h3>Headspace</h3>
                         <div class="author">Meditation</div>
                         <p>Guided meditation and mindfulness. If the root issue is stress or anxiety, this might help more than digital tools.</p>
-                        <a href="https://www.headspace.com/" target="_blank" rel="noopener" class="link">Try it →</a>
+                        <a href="https://www.headspace.com/" target="_blank" rel="noopener" class="link">Try it &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag popular">100M+ users</span>
                         <h3>Calm</h3>
-                        <div class="author">Sleep & meditation</div>
+                        <div class="author">Sleep &amp; meditation</div>
                         <p>Meditation, sleep stories, and relaxation. Award-winning app for mental wellness.</p>
-                        <a href="https://www.calm.com/" target="_blank" rel="noopener" class="link">Try it →</a>
+                        <a href="https://www.calm.com/" target="_blank" rel="noopener" class="link">Try it &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag free">Free</span>
                         <h3>Screen Time (iOS)</h3>
                         <div class="author">Built into iPhone</div>
                         <p>Apple's built-in tools. App limits, downtime scheduling, content restrictions. Already on your phone.</p>
-                        <a href="https://support.apple.com/en-gb/HT208982" target="_blank" rel="noopener" class="link">Learn more →</a>
+                        <a href="https://support.apple.com/en-gb/HT208982" target="_blank" rel="noopener" class="link">Learn more &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag free">Free</span>
                         <h3>Digital Wellbeing (Android)</h3>
                         <div class="author">Built into Android</div>
                         <p>Google's built-in tools. Dashboard, app timers, focus mode, bedtime mode. Free with your phone.</p>
-                        <a href="https://wellbeing.google/" target="_blank" rel="noopener" class="link">Learn more →</a>
+                        <a href="https://wellbeing.google/" target="_blank" rel="noopener" class="link">Learn more &rarr;</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section class="resources-section">
-        <div class="container">
-            <h2><span class="emoji">🔬</span> Research</h2>
-            <p class="section-intro">The science behind digital wellbeing. Open access papers and key studies.</p>
-            <p class="carousel-hint">Scroll →</p>
-            <div class="carousel-wrapper">
+            <div class="section">
+                <h2>Research</h2>
+                <p class="section-intro">The science behind digital wellbeing. Open access papers and key studies.</p>
+                <p class="scroll-hint">Scroll &rarr;</p>
                 <div class="carousel">
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag research">Core</span>
                         <h3>Digital Flourishing Scale</h3>
                         <div class="author">Janicke-Bowles et al. (2023)</div>
-                        <p>The validated measure we use in beó. Measures whether technology helps you flourish - not just "addiction".</p>
-                        <a href="https://doi.org/10.1080/15213269.2023.2195825" target="_blank" rel="noopener" class="link">Read paper →</a>
+                        <p>The validated measure we use in beó. Measures whether technology helps you flourish, not just "addiction".</p>
+                        <a href="https://doi.org/10.1080/15213269.2023.2195825" target="_blank" rel="noopener" class="link">Read paper &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag research">Key finding</span>
                         <h3>Self-reported vs Logged Use</h3>
                         <div class="author">Parry et al. (2021)</div>
                         <p>Meta-analysis showing self-reports don't match actual use. Why we focus on perceived control, not screen time.</p>
-                        <a href="https://doi.org/10.1177/20501579211008326" target="_blank" rel="noopener" class="link">Read paper →</a>
+                        <a href="https://doi.org/10.1177/20501579211008326" target="_blank" rel="noopener" class="link">Read paper &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag research">Foundational</span>
                         <h3>Beyond Self-Report</h3>
                         <div class="author">Andrews et al. (2015)</div>
                         <p>Early evidence that people struggle to estimate phone use. Foundation for understanding the perception gap.</p>
-                        <a href="https://doi.org/10.1371/journal.pone.0139004" target="_blank" rel="noopener" class="link">Read paper →</a>
+                        <a href="https://doi.org/10.1371/journal.pone.0139004" target="_blank" rel="noopener" class="link">Read paper &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag research">Review</span>
-                        <h3>Screens, Teens & Wellbeing</h3>
-                        <div class="author">Orben & Przybylski (2019)</div>
-                        <p>Large-scale analysis finding screen time effects are tiny - smaller than eating potatoes. Perspective matters.</p>
-                        <a href="https://doi.org/10.1038/s41562-018-0506-1" target="_blank" rel="noopener" class="link">Read paper →</a>
+                        <h3>Screens, Teens &amp; Wellbeing</h3>
+                        <div class="author">Orben &amp; Przybylski (2019)</div>
+                        <p>Large-scale analysis finding screen time effects are tiny, smaller than eating potatoes. Perspective matters.</p>
+                        <a href="https://doi.org/10.1038/s41562-018-0506-1" target="_blank" rel="noopener" class="link">Read paper &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag research">Method</span>
                         <h3>BSMAS Validation</h3>
                         <div class="author">Andreassen et al. (2017)</div>
                         <p>Original Bergen Social Media Addiction Scale. How "addiction" measures were developed and validated.</p>
-                        <a href="https://doi.org/10.1037/adb0000160" target="_blank" rel="noopener" class="link">Read paper →</a>
+                        <a href="https://doi.org/10.1037/adb0000160" target="_blank" rel="noopener" class="link">Read paper &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag research">Critical</span>
                         <h3>The Sisyphean Cycle</h3>
                         <div class="author">Billieux et al. (2015)</div>
                         <p>Why "phone addiction" research keeps failing. Critical look at methodology problems in the field.</p>
-                        <a href="https://doi.org/10.1556/2006.4.2015.009" target="_blank" rel="noopener" class="link">Read paper →</a>
+                        <a href="https://doi.org/10.1556/2006.4.2015.009" target="_blank" rel="noopener" class="link">Read paper &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <h3>beó Research Design</h3>
                         <div class="author">Pre-registered on OSF</div>
-                        <p>Our hypotheses, methods, analysis plan - registered before data collection so we can't cherry-pick results.</p>
-                        <a href="#" class="link">Coming soon →</a>
+                        <p>Our hypotheses, methods, analysis plan, registered before data collection so we can't cherry-pick results.</p>
+                        <a href="https://doi.org/10.17605/OSF.IO/4RS7C" target="_blank" rel="noopener" class="link">View on OSF &rarr;</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section class="resources-section">
-        <div class="container">
-            <h2><span class="emoji">🌐</span> Communities</h2>
-            <p class="section-intro">You're not alone in this. Places where people discuss these topics and support each other.</p>
-            <p class="carousel-hint">Scroll →</p>
-            <div class="carousel-wrapper">
+            <div class="section">
+                <h2>Communities</h2>
+                <p class="section-intro">You're not alone in this. Places where people discuss these topics and support each other.</p>
+                <p class="scroll-hint">Scroll &rarr;</p>
                 <div class="carousel">
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag popular">280k+ members</span>
                         <h3>r/nosurf</h3>
                         <div class="author">Reddit community</div>
                         <p>People reducing mindless internet use. Supportive community with practical advice and accountability.</p>
-                        <a href="https://www.reddit.com/r/nosurf/" target="_blank" rel="noopener" class="link">Visit →</a>
+                        <a href="https://www.reddit.com/r/nosurf/" target="_blank" rel="noopener" class="link">Visit &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag popular">200k+ members</span>
                         <h3>r/digitalminimalism</h3>
                         <div class="author">Reddit community</div>
                         <p>Intentional technology use inspired by Cal Newport. Discussions on tools, philosophy, and lifestyle.</p>
-                        <a href="https://www.reddit.com/r/digitalminimalism/" target="_blank" rel="noopener" class="link">Visit →</a>
+                        <a href="https://www.reddit.com/r/digitalminimalism/" target="_blank" rel="noopener" class="link">Visit &rarr;</a>
                     </div>
-                    <div class="resource-card">
-                        <span class="tag adhd">ADHD</span>
-                        <span class="tag popular">1.8M+ members</span>
+                    <div class="card">
+                        <span class="tag adhd">ADHD</span><span class="tag popular">1.8M+ members</span>
                         <h3>r/ADHD</h3>
                         <div class="author">Reddit community</div>
                         <p>Largest ADHD community online. Sharing experiences, strategies, and support. Welcoming to self-diagnosed.</p>
-                        <a href="https://www.reddit.com/r/ADHD/" target="_blank" rel="noopener" class="link">Visit →</a>
+                        <a href="https://www.reddit.com/r/ADHD/" target="_blank" rel="noopener" class="link">Visit &rarr;</a>
                     </div>
-                    <div class="resource-card">
-                        <span class="tag adhd">ADHD</span>
-                        <span class="tag uk">UK</span>
+                    <div class="card">
+                        <span class="tag adhd">ADHD</span><span class="tag uk">UK</span>
                         <h3>ADHD Foundation</h3>
                         <div class="author">UK charity</div>
                         <p>Neurodiversity charity offering resources, training and support. Based in Liverpool, helps nationally.</p>
-                        <a href="https://www.adhdfoundation.org.uk/" target="_blank" rel="noopener" class="link">Visit →</a>
+                        <a href="https://www.adhdfoundation.org.uk/" target="_blank" rel="noopener" class="link">Visit &rarr;</a>
                     </div>
-                    <div class="resource-card">
-                        <span class="tag adhd">ADHD</span>
-                        <span class="tag uk">UK</span>
+                    <div class="card">
+                        <span class="tag adhd">ADHD</span><span class="tag uk">UK</span>
                         <h3>ADHD UK</h3>
                         <div class="author">UK charity</div>
                         <p>Volunteer-led charity providing information, support and advocacy for people with ADHD across the UK.</p>
-                        <a href="https://adhduk.co.uk/" target="_blank" rel="noopener" class="link">Visit →</a>
+                        <a href="https://adhduk.co.uk/" target="_blank" rel="noopener" class="link">Visit &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag free">Free</span>
                         <h3>Center for Humane Technology</h3>
                         <div class="author">Advocacy org</div>
                         <p>Founded by former tech insiders. Resources on attention, democracy, and humane technology design.</p>
-                        <a href="https://www.humanetech.com/" target="_blank" rel="noopener" class="link">Visit →</a>
+                        <a href="https://www.humanetech.com/" target="_blank" rel="noopener" class="link">Visit &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <h3>Phone Free Movement</h3>
                         <div class="author">Advocacy org</div>
                         <p>Supporting phone-free schools and childhood. Resources for parents and educators concerned about youth phone use.</p>
-                        <a href="https://phonefreemovement.com/" target="_blank" rel="noopener" class="link">Visit →</a>
+                        <a href="https://phonefreemovement.com/" target="_blank" rel="noopener" class="link">Visit &rarr;</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section class="resources-section">
-        <div class="container">
-            <h2><span class="emoji">🎧</span> Podcasts</h2>
-            <p class="section-intro">Listen while you do other things. Long-form conversations on attention, technology, and wellbeing.</p>
-            <p class="carousel-hint">Scroll →</p>
-            <div class="carousel-wrapper">
+            <div class="section">
+                <h2>Podcasts</h2>
+                <p class="section-intro">Listen while you do other things. Long-form conversations on attention, technology, and wellbeing.</p>
+                <p class="scroll-hint">Scroll &rarr;</p>
                 <div class="carousel">
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag popular">Top 10</span>
                         <h3>Your Undivided Attention</h3>
                         <div class="author">Center for Humane Tech</div>
                         <p>Deep dives into how technology hijacks attention. Hosted by Tristan Harris (The Social Dilemma).</p>
-                        <a href="https://www.humanetech.com/podcast" target="_blank" rel="noopener" class="link">Listen →</a>
+                        <a href="https://www.humanetech.com/podcast" target="_blank" rel="noopener" class="link">Listen &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag adhd">ADHD</span>
                         <h3>ADHD Experts Podcast</h3>
                         <div class="author">ADDitude Magazine</div>
                         <p>Weekly expert interviews on ADHD management. Covers medication, relationships, work, and daily life.</p>
-                        <a href="https://www.additudemag.com/category/adhd-podcasts/" target="_blank" rel="noopener" class="link">Listen →</a>
+                        <a href="https://www.additudemag.com/category/adhd-podcasts/" target="_blank" rel="noopener" class="link">Listen &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <span class="tag adhd">ADHD</span>
                         <h3>Hacking Your ADHD</h3>
                         <div class="author">William Curb</div>
                         <p>Practical ADHD strategies in bite-sized episodes. Perfect for ADHD attention spans.</p>
-                        <a href="https://www.hackingyouradhd.com/podcast" target="_blank" rel="noopener" class="link">Listen →</a>
+                        <a href="https://www.hackingyouradhd.com/podcast" target="_blank" rel="noopener" class="link">Listen &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <h3>Deep Questions</h3>
                         <div class="author">Cal Newport</div>
                         <p>The Digital Minimalism author on productivity, technology, and the deep life. Thoughtful long-form content.</p>
-                        <a href="https://www.thedeeplife.com/listen/" target="_blank" rel="noopener" class="link">Listen →</a>
+                        <a href="https://www.thedeeplife.com/listen/" target="_blank" rel="noopener" class="link">Listen &rarr;</a>
                     </div>
-                    <div class="resource-card">
+                    <div class="card">
                         <h3>Ezra Klein Show</h3>
                         <div class="author">NY Times</div>
                         <p>Frequent episodes on attention, technology, and society. Intelligent long-form conversations.</p>
-                        <a href="https://www.nytimes.com/column/ezra-klein-podcast" target="_blank" rel="noopener" class="link">Listen →</a>
+                        <a href="https://www.nytimes.com/column/ezra-klein-podcast" target="_blank" rel="noopener" class="link">Listen &rarr;</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section class="disclaimer">
-        <div class="container">
-            <p>We have no affiliate relationships with any of these resources. We recommend them because we think they're genuinely helpful. If you find something that works better than beó, use that instead. The goal is helping you feel in control - not getting you to use our app.</p>
+            <div class="disclaimer">
+                <p>We have no affiliate relationships with any of these resources. We recommend them because we think they're genuinely helpful. If you find something that works better than beó, use that instead. The goal is helping you feel in control, not getting you to use our app.</p>
+            </div>
         </div>
-    </section>
+    </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2026 beó LLC</p>
-            <p class="enterprise">Academic & research collaboration: <a href="mailto:lab@beo.llc?subject=Research%20collaboration%20enquiry">lab@beo.llc</a></p>
-            <nav>
+        <div class="footer-inner">
+            <span>&copy; 2026 beó LLC</span>
+            <div>
                 <a href="privacy.html">Privacy</a>
                 <a href="terms.html">Terms</a>
-                <a href="blog.html">Lab Notes</a>
-                <a href="resources.html">Resources</a>
-            </nav>
+                <a href="index.html">Home</a>
+            </div>
         </div>
     </footer>
+<script src="assets/cookies.js"></script>
 </body>
 </html>

@@ -3,100 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research – beó lab</title>
-    <meta name="description" content="Research insights on digital wellbeing, social media psychology, and attention science from beó lab.">
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9KPL21EX4E"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-9KPL21EX4E');
-    </script>
+    <title>Lab Notes | beó</title>
+    <meta name="description" content="Research insights on digital wellbeing, AI cognitive impact, and attention science from beóLAB.">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #3D6B4A;
-            --primary-dark: #2D5A3D;
-            --background: #F5F5F3;
-            --text-dark: #1A1A1A;
-            --text: #4A4A4A;
-            --text-light: #7A7A7A;
-            --text-muted: #9A9A9A;
+            --green-deep: #1B4332;
+            --green-primary: #2D5A27;
+            --green-muted: #3A7D32;
+            --sage: #8E9F8E;
+            --sage-light: #C2CEC2;
+            --cream: #FAFAF7;
+            --cream-warm: #F5F3EE;
+            --stone: #E8E6E1;
+            --text-primary: #1C1C1C;
+            --text-secondary: #4A4A4A;
+            --text-light: #767676;
             --white: #FFFFFF;
-            --border: #E0E0E0;
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--background); color: var(--text); line-height: 1.6; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-        
-        header { padding: 24px 0; background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
-        .header-content { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 28px; font-weight: 600; text-decoration: none; color: var(--primary); }
-        nav { display: flex; gap: 32px; align-items: center; }
-        nav a { color: var(--text); text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s; }
-        nav a:hover { color: var(--primary); }
-        nav a.active { color: var(--primary); }
-        
-        .page-header { padding: 100px 0 60px; text-align: center; background: var(--white); border-bottom: 1px solid var(--border); }
-        .page-header h1 { font-size: 48px; font-weight: 500; color: var(--text-dark); margin-bottom: 16px; }
-        .page-header p { font-size: 18px; color: var(--text-light); }
-        
-        .blog-posts { padding: 80px 0; }
-        .posts-grid { display: grid; gap: 48px; max-width: 800px; margin: 0 auto; }
-        .post-card { background: var(--white); padding: 40px; border-radius: 16px; transition: transform 0.2s, box-shadow 0.2s; }
-        .post-card:hover { transform: translateY(-4px); box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
-        .post-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--text-primary); background: var(--cream); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; line-height: 1.25; }
+        a { color: var(--green-primary); text-decoration: none; border-bottom: 1px solid var(--sage-light); transition: border-color 0.2s ease; }
+        a:hover { border-bottom-color: var(--green-primary); }
+
+        header { background: rgba(250, 250, 247, 0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.04); position: fixed; top: 0; left: 0; right: 0; z-index: 100; }
+        .header-inner { max-width: 1120px; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 3rem); display: flex; align-items: center; justify-content: space-between; height: 72px; }
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; border: none; }
+        .logo img { width: 36px; height: 36px; border-radius: 8px; }
+        .logo-text { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.6rem; color: var(--green-deep); letter-spacing: -0.02em; }
+        nav { display: flex; align-items: center; gap: clamp(1.2rem, 3vw, 2.2rem); }
+        nav a { font-size: 0.9rem; color: var(--text-secondary); border: none; position: relative; }
+        nav a::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 1.5px; background: var(--green-primary); transition: width 0.25s ease; }
+        nav a:hover::after { width: 100%; }
+        .nav-cta { background: var(--green-deep); color: var(--cream) !important; padding: 8px 20px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; transition: background 0.2s ease; }
+        .nav-cta:hover { background: var(--green-primary); }
+        .nav-cta::after { display: none; }
+
+        .container { max-width: 1120px; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 3rem); }
+
+        .page-header { padding: clamp(8rem, 16vw, 11rem) 0 clamp(3rem, 6vw, 5rem); }
+        .page-header h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--green-deep); margin-bottom: 1rem; }
+        .page-header p { font-size: 1.1rem; color: var(--text-secondary); max-width: 600px; }
+
+        .posts-grid { max-width: 760px; padding-bottom: clamp(4rem, 8vw, 7rem); }
+
+        .post-card { background: var(--white); padding: clamp(1.75rem, 4vw, 2.5rem); border-radius: 12px; border: 1px solid rgba(0,0,0,0.04); margin-bottom: 1.5rem; transition: box-shadow 0.3s ease; }
+        .post-card:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
+
+        .post-meta { font-size: 0.8rem; color: var(--text-light); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 8px; }
         .post-meta img { width: 24px; height: 24px; border-radius: 50%; object-fit: cover; }
-        .post-meta .author { color: var(--text); font-weight: 500; }
-        .post-title { font-size: 28px; font-weight: 600; color: var(--text-dark); margin-bottom: 16px; line-height: 1.3; }
-        .post-title a { color: var(--text-dark); text-decoration: none; transition: color 0.2s; }
-        .post-title a:hover { color: var(--primary); }
-        .post-excerpt { font-size: 16px; color: var(--text); line-height: 1.7; margin-bottom: 20px; }
-        .read-more { display: inline-block; color: var(--primary); font-weight: 600; text-decoration: none; font-size: 15px; transition: color 0.2s; }
-        .read-more:hover { color: var(--primary-dark); }
-        
-        footer { padding: 48px 0; text-align: center; background: var(--white); border-top: 1px solid var(--border); }
-        footer p { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
-        footer nav { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; }
-        footer nav a { font-size: 13px; color: var(--text); text-decoration: none; transition: color 0.2s; }
-        footer nav a:hover { color: var(--primary); }
-        
-        @media (max-width: 768px) {
-            .page-header h1 { font-size: 32px; }
-            .post-card { padding: 32px 24px; }
-            .post-title { font-size: 24px; }
+        .post-meta .author { color: var(--text-secondary); font-weight: 500; }
+
+        .post-title { font-size: clamp(1.2rem, 2.5vw, 1.5rem); color: var(--green-deep); margin-bottom: 0.75rem; line-height: 1.3; }
+        .post-title a { color: var(--green-deep); border: none; }
+        .post-title a:hover { color: var(--green-primary); }
+
+        .post-excerpt { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem; }
+
+        .read-more { font-size: 0.9rem; font-weight: 500; color: var(--green-primary); border-bottom: 1px solid var(--sage-light); }
+        .read-more:hover { border-bottom-color: var(--green-primary); }
+
+        footer { background: var(--green-deep); color: rgba(250, 250, 247, 0.6); padding: 2.5rem 0; }
+        .footer-inner { max-width: 1120px; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 3rem); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.8rem; }
+        .footer-inner a { color: rgba(250, 250, 247, 0.4); border: none; margin-left: 1.5rem; }
+        .footer-inner a:hover { color: var(--cream); }
+
+        @media (max-width: 680px) {
+            .footer-inner { flex-direction: column; text-align: center; }
+            .footer-inner a { margin-left: 0; }
+            header nav a:not(.nav-cta) { display: none; }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html#top" class="logo">beó</a>
-                <nav>
-                    <a href="blog.html" class="active">lab notes</a>
-                    <a href="team.html">about</a>
-                    <a href="resources.html">resources</a>
-                    <a href="mailto:info@beo.llc" title="Contact us" class="icon-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></a>
-                </nav>
-            </div>
+        <div class="header-inner">
+            <a href="index.html" class="logo" aria-label="beó homepage">
+                <span class="logo-text">beó</span>
+            </a>
+            <nav aria-label="Main navigation">
+                <a href="index.html#measure">Measure</a>
+                <a href="index.html#lab">Research</a>
+                <a href="team.html">Team</a>
+                <a href="https://calendly.com/juliehendry/30min" target="_blank" rel="noopener" class="nav-cta">Book a call</a>
+            </nav>
         </div>
     </header>
 
-    <section class="page-header">
+    <main>
         <div class="container">
-            <h1>Lab Notes</h1>
-            <p>Insights on digital wellbeing, social media psychology, and attention science</p>
-        </div>
-    </section>
+            <div class="page-header">
+                <h1>Lab Notes</h1>
+                <p>Research insights on digital wellbeing, AI cognitive impact, and attention science from beóLAB.</p>
+            </div>
 
-    <section class="blog-posts">
-        <div class="container">
             <div class="posts-grid">
                 <article class="post-card">
                     <div class="post-meta">
-                        <img src="julie-photo.png" alt="Julie Hendry">
+                        <img src="julie-photo.webp" alt="Julie Hendry">
+                        <span class="author">Julie Hendry</span> · 17 February 2026
+                    </div>
+                    <h2 class="post-title">
+                        <a href="blog/your-ai-rollout-has-a-measurement-problem.html">Your AI Rollout Has a Measurement Problem</a>
+                    </h2>
+                    <p class="post-excerpt">
+                        Employee satisfaction surveys tell you how people feel about ChatGPT, Copilot, and Gemini. Not whether they're changing how your workforce thinks. Six dimensions that capture what AI is actually doing to your people.
+                    </p>
+                    <a href="blog/your-ai-rollout-has-a-measurement-problem.html" class="read-more">Read article</a>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-meta">
+                        <img src="julie-photo.webp" alt="Julie Hendry">
                         <span class="author">Julie Hendry</span> · 5 February 2026
                     </div>
                     <h2 class="post-title">
@@ -105,51 +129,50 @@
                     <p class="post-excerpt">
                         In 2020, my research found that "addiction" questionnaires showed weak correlation with actual phone use. I was confused. Then I found a better question: is technology helping you live well?
                     </p>
-                    <a href="blog/why-i-stopped-chasing-addiction.html" class="read-more">Read article →</a>
+                    <a href="blog/why-i-stopped-chasing-addiction.html" class="read-more">Read article</a>
                 </article>
 
                 <article class="post-card">
                     <div class="post-meta">
-                        <img src="julie-photo.png" alt="Julie Hendry">
+                        <img src="julie-photo.webp" alt="Julie Hendry">
                         <span class="author">Julie Hendry</span> · 28 January 2026
                     </div>
                     <h2 class="post-title">
                         <a href="blog/from-research-to-reality.html">From Research to Reality</a>
                     </h2>
                     <p class="post-excerpt">
-                        In 2020, I completed an MSc Psychology dissertation investigating social media's effects on attention. The most interesting finding wasn't what I expected: it was the perception gap. How that research became beó's founding hypothesis.
+                        People can accurately report how often they check social media. But "addiction" questionnaires don't predict actual behaviour at all. The data behind beó's perception gap finding and what it means for intervention design.
                     </p>
-                    <a href="blog/from-research-to-reality.html" class="read-more">Read article →</a>
+                    <a href="blog/from-research-to-reality.html" class="read-more">Read article</a>
                 </article>
 
                 <article class="post-card">
                     <div class="post-meta">
-                        <img src="mark-photo.png" alt="Mark Andrew Pope">
+                        <img src="mark-photo.webp" alt="Mark Andrew Pope">
                         <span class="author">Mark Andrew Pope</span> · 5 January 2026
                     </div>
                     <h2 class="post-title">
                         <a href="blog/why-beo.html">Why beó</a>
                     </h2>
                     <p class="post-excerpt">
-                        We've killed anticipation. Films, music, letters -we used to wait. Now? Want, have. Want, have. We've optimised away something human and nobody's asking what we lost.
+                        We've killed anticipation. Films, music, letters. We used to wait. Now? Want, have. Want, have. We've optimised away something human and nobody's asking what we lost.
                     </p>
-                    <a href="blog/why-beo.html" class="read-more">Read article →</a>
+                    <a href="blog/why-beo.html" class="read-more">Read article</a>
                 </article>
             </div>
         </div>
-    </section>
+    </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2026 beó LLC</p>
-            <p class="enterprise" style="font-size: 13px; color: var(--text); margin: 8px 0;">Academic & research collaboration: <a href="mailto:lab@beo.llc" style="color: var(--primary); text-decoration: none; font-weight: 600;">lab@beo.llc</a></p>
-            <p class="enterprise" style="font-size: 13px; color: var(--text); margin: 8px 0;">Enterprise & partnerships: <a href="mailto:info@beo.llc" style="color: var(--primary); text-decoration: none; font-weight: 600;">info@beo.llc</a></p>
-            <nav>
+        <div class="footer-inner">
+            <span>&copy; 2026 beó LLC</span>
+            <div>
                 <a href="privacy.html">Privacy</a>
                 <a href="terms.html">Terms</a>
-                <a href="blog.html">Lab Notes</a>
-            </nav>
+                <a href="index.html">Home</a>
+            </div>
         </div>
     </footer>
+<script src="assets/cookies.js"></script>
 </body>
 </html>

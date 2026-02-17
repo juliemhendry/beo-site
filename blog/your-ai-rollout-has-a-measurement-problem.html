@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your AI Rollout Has a Measurement Problem | beó Lab Notes</title>
+    <meta name="description" content="Employee surveys tell you how people feel about AI tools. Not whether ChatGPT, Copilot, and generative AI are changing how your workforce thinks. Six dimensions to measure instead.">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-deep: #1B4332;
+            --green-primary: #2D5A27;
+            --sage: #8E9F8E;
+            --sage-light: #C2CEC2;
+            --cream: #FAFAF7;
+            --cream-warm: #F5F3EE;
+            --stone: #E8E6E1;
+            --text-primary: #1C1C1C;
+            --text-secondary: #4A4A4A;
+            --text-light: #767676;
+            --white: #FFFFFF;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--text-primary); background: var(--cream); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; line-height: 1.25; }
+        a { color: var(--green-primary); text-decoration: none; border-bottom: 1px solid var(--sage-light); transition: border-color 0.2s ease; }
+        a:hover { border-bottom-color: var(--green-primary); }
+
+        header { background: rgba(250, 250, 247, 0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.04); position: fixed; top: 0; left: 0; right: 0; z-index: 100; }
+        .header-inner { max-width: 1120px; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 3rem); display: flex; align-items: center; justify-content: space-between; height: 72px; }
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; border: none; }
+        .logo-text { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.6rem; color: var(--green-deep); letter-spacing: -0.02em; }
+        .back-link { font-size: 0.9rem; color: var(--text-secondary); border: none; }
+        .back-link:hover { color: var(--green-primary); }
+
+        .post-header { max-width: 720px; margin: 0 auto; padding: clamp(7rem, 12vw, 9rem) clamp(1.25rem, 4vw, 3rem) 0; }
+        .post-header .back { font-size: 0.85rem; color: var(--text-light); border: none; display: inline-block; margin-bottom: 2rem; }
+        .post-header .back:hover { color: var(--green-primary); }
+        .post-header h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--green-deep); margin-bottom: 1rem; }
+        .post-meta { font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.75rem; }
+        .post-author { display: flex; align-items: center; gap: 12px; padding-bottom: 2rem; border-bottom: 1px solid var(--stone); border: none; }
+        .post-author img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+        .author-info { font-size: 0.85rem; }
+        .author-name { color: var(--text-primary); font-weight: 500; }
+        .author-title { color: var(--text-light); }
+
+        article { max-width: 720px; margin: 0 auto; padding: 2.5rem clamp(1.25rem, 4vw, 3rem) 5rem; }
+        article p { font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.8; }
+        article h2 { font-size: 1.5rem; color: var(--green-deep); margin: 2.5rem 0 1rem; }
+        article strong { color: var(--text-primary); font-weight: 600; }
+        article em { font-style: italic; }
+
+        .callout { background: var(--cream-warm); border-left: 3px solid var(--sage); padding: 1.25rem 1.5rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0; }
+        .callout p { font-size: 0.98rem; margin-bottom: 0.5rem; }
+        .callout p:last-child { margin-bottom: 0; }
+
+        .dimensions { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+        .dim { background: var(--white); padding: 1rem 1.25rem; border-radius: 8px; border: 1px solid rgba(0,0,0,0.04); }
+        .dim-name { font-weight: 600; font-size: 0.9rem; color: var(--green-deep); margin-bottom: 0.25rem; }
+        .dim-detail { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; }
+        @media (max-width: 600px) { .dimensions { grid-template-columns: 1fr; } }
+
+        .cta-card { background: var(--green-deep); color: var(--cream); padding: clamp(2rem, 4vw, 2.5rem); border-radius: 12px; text-align: center; margin: 3rem 0; }
+        .cta-card h3 { font-size: 1.4rem; color: var(--cream); margin-bottom: 0.5rem; }
+        .cta-card p { color: rgba(250,250,247,0.7); margin-bottom: 1.25rem; font-size: 0.95rem; }
+        .cta-card a { display: inline-block; background: var(--cream); color: var(--green-deep); padding: 10px 28px; border-radius: 6px; font-weight: 500; font-size: 0.9rem; border: none; transition: background 0.2s ease; }
+        .cta-card a:hover { background: var(--white); }
+
+        .ref { font-size: 0.85rem; color: var(--text-light); }
+        .ref a { color: var(--green-primary); }
+
+        footer { background: var(--green-deep); color: rgba(250, 250, 247, 0.6); padding: 2.5rem 0; }
+        .footer-inner { max-width: 1120px; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 3rem); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.8rem; }
+        .footer-inner a { color: rgba(250, 250, 247, 0.4); border: none; margin-left: 1.5rem; }
+        .footer-inner a:hover { color: var(--cream); }
+        @media (max-width: 600px) { .footer-inner { flex-direction: column; text-align: center; } .footer-inner a { margin-left: 0; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo" aria-label="beó homepage">
+                <span class="logo-text">beó</span>
+            </a>
+            <a href="../blog.html" class="back-link">&larr; Lab Notes</a>
+        </div>
+    </header>
+
+    <div class="post-header">
+        <h1>Your AI Rollout Has a Measurement Problem</h1>
+        <p class="post-meta">17 February 2026</p>
+        <a href="../blog.html" class="post-author" title="View all posts">
+            <img src="../julie-photo.webp" alt="Julie Hendry">
+            <div class="author-info">
+                <div class="author-name">Julie Hendry</div>
+                <div class="author-title">CTO</div>
+            </div>
+        </a>
+    </div>
+
+    <article>
+        <p>You've rolled out ChatGPT Enterprise, GitHub Copilot, or Gemini across your teams. Or you're about to. You've probably run an employee survey: "How satisfied are you with the new AI tools?" Maybe you're tracking adoption metrics: logins, prompts per day, features used.</p>
+
+        <p>None of that tells you what you actually need to know.</p>
+
+        <h2>The question nobody is asking</h2>
+
+        <p>Satisfaction surveys measure sentiment. Adoption dashboards measure usage. Neither measures whether AI is changing how your people <em>think</em>.</p>
+
+        <p>Is your engineering team losing the ability to debug without AI assistance? Are your analysts less confident in decisions they made themselves? Is your team's collective knowledge getting shallower because everyone's relying on the same tool for the same answers?</p>
+
+        <p>These are cognitive questions. And right now, most organisations deploying AI have no way to answer them.</p>
+
+        <h2>We've seen this before</h2>
+
+        <p>In 2020, we ran a study comparing what people <em>believed</em> about their smartphone use to what they <em>actually did</em>. The widely used "addiction" questionnaires showed almost no correlation with real behaviour (r = .12). The tools the field relied on were measuring the wrong thing entirely.</p>
+
+        <p>The same pattern is playing out in enterprise AI adoption. Employee satisfaction surveys tell you how people <em>feel</em> about generative AI tools. They don't tell you whether those tools are changing how your workforce thinks, decides, and collaborates. That gap between perception and reality is where the risk lives.</p>
+
+        <div class="callout">
+            <p><strong>An employee who reports being "very satisfied" with AI tools might simultaneously be experiencing skill atrophy, reduced decision confidence, and increased cognitive load.</strong> A satisfaction survey will never surface this. A cognitive impact assessment will.</p>
+        </div>
+
+        <h2>What should you measure instead?</h2>
+
+        <p>After reviewing the evidence base across cognitive psychology, organisational behaviour, and human-computer interaction research, we've identified six dimensions that capture what AI is actually doing to your workforce:</p>
+
+        <div class="dimensions">
+            <div class="dim">
+                <div class="dim-name">Cognitive Load</div>
+                <div class="dim-detail">Is AI reducing mental effort or adding a new layer of complexity? Measured using NASA-TLX adapted for workplace AI.</div>
+            </div>
+            <div class="dim">
+                <div class="dim-name">Decision Confidence</div>
+                <div class="dim-detail">Are people more or less confident in decisions made with AI assistance? And does that confidence match actual decision quality?</div>
+            </div>
+            <div class="dim">
+                <div class="dim-name">Perceived Control</div>
+                <div class="dim-detail">Do people feel they're directing the AI, or that the AI is directing them?</div>
+            </div>
+            <div class="dim">
+                <div class="dim-name">Attention Quality</div>
+                <div class="dim-detail">Is AI sharpening focus or scattering it? Measured using adapted ARCES (Cheyne, Carriere &amp; Smilek, 2006).</div>
+            </div>
+            <div class="dim">
+                <div class="dim-name">Collaboration Quality</div>
+                <div class="dim-detail">How is AI changing the way teams share knowledge and make decisions together?</div>
+            </div>
+            <div class="dim">
+                <div class="dim-name">Skill Trajectory</div>
+                <div class="dim-detail">Are people developing new capabilities or experiencing skill atrophy? The question every CTO should be asking.</div>
+            </div>
+        </div>
+
+        <p>These aren't hypothetical concerns. Early research on AI-assisted decision making suggests that over-reliance on AI recommendations can reduce critical thinking and create automation bias. The question isn't whether this will affect your workforce. It's whether you'll notice before it becomes a problem.</p>
+
+        <h2>Why measure now?</h2>
+
+        <p>If you're deploying AI tools in 2026, you have a narrow window. You can measure cognitive baselines <em>before</em> AI adoption changes them, or you can try to reconstruct what changed after the fact. One gives you evidence. The other gives you guesswork.</p>
+
+        <p>A baseline taken before your AI rollout, followed by measurement at 4 and 12 weeks, gives you a longitudinal picture of what generative AI is actually doing to your team's cognition. Not what they think it's doing. What it's doing.</p>
+
+        <h2>What this looks like</h2>
+
+        <p>We're running this as a research study, not a consultancy engagement. Pre-registered methodology on the Open Science Framework. Published findings. Validated instruments. The same rigour you'd expect from an academic study, applied to your organisation.</p>
+
+        <p>For our founding cohort (3 to 5 organisations), this means bespoke pricing, a published case study, your name on the paper if you want it, and early access to cross-industry benchmarking data.</p>
+
+        <p>If you're planning an AI rollout and want to know what it's actually doing to your people, now is the time to measure.</p>
+
+        <div class="cta-card">
+            <h3>Founding research cohort</h3>
+            <p>We're selecting 3 to 5 organisations for our first AI workforce cognitive impact study. 30 minutes, no pitch, just a conversation about what you're seeing.</p>
+            <a href="https://calendly.com/juliehendry/30min" target="_blank" rel="noopener">Book a conversation</a>
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer-inner">
+            <span>&copy; 2026 beó LLC</span>
+            <div>
+                <a href="../privacy.html">Privacy</a>
+                <a href="../terms.html">Terms</a>
+                <a href="../blog.html">Lab Notes</a>
+            </div>
+        </div>
+    </footer>
+<script src="../assets/cookies.js"></script>
+</body>
+</html>
