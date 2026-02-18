@@ -1,0 +1,4 @@
+exclude:
+  - archive
+  - .vscode
+  - "*.md"
