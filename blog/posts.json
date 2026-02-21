@@ -1,0 +1,30 @@
+{
+  "source": "beò Lab Notes",
+  "base_url": "https://beo.llc",
+  "posts": [
+    {
+      "title": "Your AI Rollout Has a Measurement Problem",
+      "date": "17 February 2026",
+      "excerpt": "Employee satisfaction surveys tell you how people feel about ChatGPT, Copilot, and Gemini. Not whether they're changing how your workforce thinks. Six dimensions that capture what AI is actually doing to your people.",
+      "path": "/blog/your-ai-rollout-has-a-measurement-problem.html"
+    },
+    {
+      "title": "Why I Stopped Chasing 'Addiction'",
+      "date": "5 February 2026",
+      "excerpt": "In 2020, my research tested whether intense social media use affects attention. The Stroop task found nothing. But a measurement validity finding changed everything.",
+      "path": "/blog/why-i-stopped-chasing-addiction.html"
+    },
+    {
+      "title": "From Research to Reality",
+      "date": "28 January 2026",
+      "excerpt": "Self-reported social media frequency matched actual iPhone data. But a widely-used smartphone scale didn't. The measurement validity findings behind beò's approach.",
+      "path": "/blog/from-research-to-reality.html"
+    },
+    {
+      "title": "Why beò",
+      "date": "5 January 2026",
+      "excerpt": "We've killed anticipation. Films, music, letters. We used to wait. Now? Want, have. Want, have. We've optimised away something human and nobody's asking what we lost.",
+      "path": "/blog/why-beo.html"
+    }
+  ]
+}
