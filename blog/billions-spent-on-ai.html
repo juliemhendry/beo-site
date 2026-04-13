@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billions Spent on AI. Nobody Is Measuring What It's Doing to Your People. | beò Lab Notes</title>
+    <meta name="description" content="Nearly 90% of firms report no measurable impact from AI on productivity. The gap between what organisations believe AI will do and what it is actually doing is enormous. And nobody has the instruments to tell the difference.">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-deep: #1B4332;
+            --green-primary: #2D5A27;
+            --sage: #8E9F8E;
+            --sage-light: #C2CEC2;
+            --cream: #FAFAF7;
+            --cream-warm: #F5F3EE;
+            --stone: #E8E6E1;
+            --text-primary: #1C1C1C;
+            --text-secondary: #4A4A4A;
+            --text-light: #767676;
+            --white: #FFFFFF;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--text-primary); background: var(--cream); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; line-height: 1.25; }
+        a { color: var(--green-primary); text-decoration: none; border-bottom: 1px solid var(--sage-light); transition: border-color 0.2s ease; }
+        a:hover { border-bottom-color: var(--green-primary); }
+
+        header { background: rgba(250, 250, 247, 0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.04); position: fixed; top: 0; left: 0; right: 0; z-index: 100; }
+        .header-inner { max-width: 1120px; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 3rem); display: flex; align-items: center; justify-content: space-between; height: 72px; }
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; border: none; }
+        .logo-text { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.6rem; color: var(--green-deep); letter-spacing: -0.02em; }
+        .back-link { font-size: 0.9rem; color: var(--text-secondary); border: none; }
+        .back-link:hover { color: var(--green-primary); }
+
+        .post-header { max-width: 720px; margin: 0 auto; padding: clamp(7rem, 12vw, 9rem) clamp(1.25rem, 4vw, 3rem) 0; }
+        .post-header .back { font-size: 0.85rem; color: var(--text-light); border: none; display: inline-block; margin-bottom: 2rem; }
+        .post-header .back:hover { color: var(--green-primary); }
+        .post-header h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--green-deep); margin-bottom: 1rem; }
+        .post-meta { font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.75rem; }
+        .post-author { display: flex; align-items: center; gap: 12px; padding-bottom: 2rem; border-bottom: 1px solid var(--stone); border: none; }
+        .post-author img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+        .author-info { font-size: 0.85rem; }
+        .author-name { color: var(--text-primary); font-weight: 500; }
+        .author-title { color: var(--text-light); }
+
+        article { max-width: 720px; margin: 0 auto; padding: 2.5rem clamp(1.25rem, 4vw, 3rem) 5rem; }
+        article p { font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.8; }
+        article h2 { font-size: 1.5rem; color: var(--green-deep); margin: 2.5rem 0 1rem; }
+        article strong { color: var(--text-primary); font-weight: 600; }
+        article em { font-style: italic; }
+
+        .callout { background: var(--cream-warm); border-left: 3px solid var(--sage); padding: 1.25rem 1.5rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0; }
+        .callout p { font-size: 0.98rem; margin-bottom: 0.5rem; }
+        .callout p:last-child { margin-bottom: 0; }
+
+        .cta-card { background: var(--green-deep); color: var(--cream); padding: clamp(2rem, 4vw, 2.5rem); border-radius: 12px; text-align: center; margin: 3rem 0; }
+        .cta-card h3 { font-size: 1.4rem; color: var(--cream); margin-bottom: 0.5rem; }
+        .cta-card p { color: rgba(250,250,247,0.7); margin-bottom: 1.25rem; font-size: 0.95rem; }
+        .cta-card a { display: inline-block; background: var(--cream); color: var(--green-deep); padding: 10px 28px; border-radius: 6px; font-weight: 500; font-size: 0.9rem; border: none; transition: background 0.2s ease; }
+        .cta-card a:hover { background: var(--white); }
+
+        .ref { font-size: 0.85rem; color: var(--text-light); }
+        .ref a { color: var(--green-primary); }
+
+        footer { background: var(--green-deep); color: rgba(250, 250, 247, 0.6); padding: 2.5rem 0; }
+        .footer-inner { max-width: 1120px; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 3rem); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.8rem; }
+        .footer-inner a { color: rgba(250, 250, 247, 0.4); border: none; margin-left: 1.5rem; }
+        .footer-inner a:hover { color: var(--cream); }
+        @media (max-width: 600px) { .footer-inner { flex-direction: column; text-align: center; } .footer-inner a { margin-left: 0; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo" aria-label="beò homepage">
+                <span class="logo-text">beò</span>
+            </a>
+            <a href="../blog.html" class="back-link">&larr; Lab Notes</a>
+        </div>
+    </header>
+
+    <div class="post-header">
+        <h1>Billions Spent on AI. Nobody Is Measuring What It's Doing to Your People.</h1>
+        <p class="post-meta">13 April 2026</p>
+        <a href="../blog.html" class="post-author" title="View all posts">
+            <img src="../julie-photo.webp" alt="Julie Hendry">
+            <div class="author-info">
+                <div class="author-name">Julie Hendry</div>
+                <div class="author-title">CTO</div>
+            </div>
+        </a>
+    </div>
+
+    <article>
+        <p>The numbers are starting to come in and they don't say what the vendors promised.</p>
+
+        <p>A survey of over 6,000 C-suite executives by the Federal Reserve Bank of Atlanta found that nearly 90% of firms report no measurable impact from AI on employment or productivity over the past three years. Not a small impact. No impact. Meanwhile those same executives forecast AI will increase productivity by 1.4% over the next three years. The gap between what organisations believe AI will do and what it is actually doing is enormous.</p>
+
+        <p>Boston Consulting Group surveyed nearly 1,500 workers and found something more specific. Productivity increased when people used up to three AI tools. After that it dropped. More tools, less output. They called it "AI brain fry": the cognitive overload that comes from constantly switching between AI-powered systems, each with its own interface, logic, and demands on attention.</p>
+
+        <p>Researchers at UC Berkeley tracked a 200-person tech firm for eight months and found that AI didn't reduce work. It intensified it. People completed more tasks across a wider range. They took on more because AI made it easy to start things. But the result was more multitasking, more context-switching, and ultimately more burnout. The researchers published their findings in Harvard Business Review under a title that summarises the problem: "AI Doesn't Reduce Work. It Intensifies It."</p>
+
+        <p>ActivTrak's 2026 State of the Workplace report found that focus efficiency, the proportion of work time spent in uninterrupted concentration, has dropped to 60%. A three-year low. Directly correlated with the proliferation of AI tools in the workplace.</p>
+
+        <p>And ManpowerGroup's 2026 Global Talent Barometer found that while regular AI usage among workers jumped 13%, confidence in the technology fell 18%. People are using more AI and trusting it less.</p>
+
+        <h2>The measurement problem</h2>
+
+        <p>Every one of these studies measures something useful. Speed, output, adoption rates, self-reported productivity, time allocation. But none of them measures the thing that matters most: what is AI doing to how people think?</p>
+
+        <div class="callout">
+            <p><strong>Are decision-making patterns changing? Is critical thinking being offloaded rather than augmented? Are collaboration dynamics shifting in ways that affect the quality of outcomes, not just the speed? Is the cognitive load of managing multiple AI tools degrading the capacity for deep, focused work?</strong></p>
+        </div>
+
+        <p>These are not abstract questions. They are the questions that determine whether AI deployment is genuinely helping an organisation or quietly making it worse.</p>
+
+        <p>The reason nobody is answering them is that the instruments don't exist. The standard scales used to measure how people relate to technology were not designed for this. During my MSc research at the University of Strathclyde, I tested whether a widely used smartphone usage questionnaire predicted actual device behaviour measured by iPhone Screen Time. It didn't. The instrument was measuring something, but not what it claimed to. Self-report and reality were different things.</p>
+
+        <p>If the measurement tools we have can't reliably capture something as simple as how much someone uses their phone, they are not going to capture what AI is doing to cognitive patterns in a workplace.</p>
+
+        <h2>What this means for organisations</h2>
+
+        <p>The EU AI Act is already requiring impact assessments for high-risk AI systems. The UK is moving in the same direction. Regulators are going to start asking organisations to demonstrate that they have measured the effect of AI on their people. Not just data privacy. Cognitive impact. Decision quality. Skill development.</p>
+
+        <p>Most organisations have no framework for this. No baseline. No instruments. No methodology.</p>
+
+        <p>The ones that start measuring now will have evidence when the regulators come asking. The ones that wait will be scrambling.</p>
+
+        <h2>What beò is building</h2>
+
+        <p>beò exists because the gap between what organisations think AI is doing and what it is actually doing is too important to leave unmeasured. We are building rigorous cognitive impact assessment tools for organisations deploying AI. Not adoption surveys. Not productivity dashboards. Instruments that measure what is happening to how people think, decide, and collaborate when AI enters their working environment.</p>
+
+        <p>Our founding research established that standard measurement tools in this field are inadequate. That's not a criticism of the researchers who built them. It's a statement about the pace of change. The tools were designed for a different era. AI in the workplace requires new instruments built from the ground up.</p>
+
+        <p>The research coming out in 2026 confirms what we set out to address. Billions are being spent. The impact is unclear at best and harmful at worst. And nobody has the instruments to tell the difference.</p>
+
+        <p>That's the problem beò is solving.</p>
+
+        <div class="cta-card">
+            <h3>Founding research cohort</h3>
+            <p>We're selecting 3 to 5 organisations for our first AI workforce cognitive impact study. 30 minutes, no pitch, just a conversation about what you're seeing.</p>
+            <a href="https://calendly.com/juliehendry/30min" target="_blank" rel="noopener">Book a conversation</a>
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer-inner">
+            <span>&copy; 2026 beò LLC</span>
+            <div>
+                <a href="../privacy.html">Privacy</a>
+                <a href="../terms.html">Terms</a>
+                <a href="../blog.html">Lab Notes</a>
+            </div>
+        </div>
+    </footer>
+<script src="../assets/cookies.js"></script>
+</body>
+</html>

@@ -3,6 +3,12 @@
   "base_url": "https://beo.llc",
   "posts": [
     {
+      "title": "Billions Spent on AI. Nobody Is Measuring What It's Doing to Your People.",
+      "date": "13 April 2026",
+      "excerpt": "Nearly 90% of firms report no measurable impact from AI on productivity. The gap between what organisations believe AI will do and what it is actually doing is enormous. And nobody has the instruments to tell the difference.",
+      "path": "/blog/billions-spent-on-ai.html"
+    },
+    {
       "title": "Your AI Rollout Has a Measurement Problem",
       "date": "17 February 2026",
       "excerpt": "Employee satisfaction surveys tell you how people feel about ChatGPT, Copilot, and Gemini. Not whether they're changing how your workforce thinks. Six dimensions that capture what AI is actually doing to your people.",
