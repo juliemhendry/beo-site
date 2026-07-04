@@ -1,4 +1,4 @@
-/* beó cookie consent - PECR/UK GDPR compliant */
+/* beò cookie consent - PECR/UK GDPR compliant */
 (function() {
     if (localStorage.getItem('beo-cookies') === 'accepted') {
         loadAnalytics();

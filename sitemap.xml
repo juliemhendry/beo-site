@@ -2,72 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://beo.llc/</loc>
-        <lastmod>2026-02-18</lastmod>
+        <lastmod>2026-07-04</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://beo.llc/team.html</loc>
-        <lastmod>2026-02-18</lastmod>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://beo.llc/flourish.html</loc>
-        <lastmod>2026-02-18</lastmod>
+        <lastmod>2026-07-04</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://beo.llc/community.html</loc>
-        <lastmod>2026-02-18</lastmod>
+        <lastmod>2026-07-04</lastmod>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://beo.llc/resources.html</loc>
-        <lastmod>2026-02-18</lastmod>
+        <lastmod>2026-07-04</lastmod>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://beo.llc/blog.html</loc>
-        <lastmod>2026-02-18</lastmod>
+        <lastmod>2026-07-04</lastmod>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://beo.llc/pis.html</loc>
-        <lastmod>2026-02-18</lastmod>
+        <lastmod>2026-07-04</lastmod>
         <priority>0.6</priority>
     </url>
     <url>
         <loc>https://beo.llc/blog/your-ai-rollout-has-a-measurement-problem.html</loc>
-        <lastmod>2026-02-18</lastmod>
+        <lastmod>2026-07-04</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://beo.llc/blog/from-research-to-reality.html</loc>
-        <lastmod>2026-02-18</lastmod>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://beo.llc/blog/why-beo.html</loc>
-        <lastmod>2026-02-18</lastmod>
+        <lastmod>2026-07-04</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://beo.llc/blog/why-i-stopped-chasing-addiction.html</loc>
-        <lastmod>2026-02-18</lastmod>
+        <lastmod>2026-07-04</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://beo.llc/privacy.html</loc>
-        <lastmod>2026-02-18</lastmod>
+        <lastmod>2026-07-04</lastmod>
         <priority>0.3</priority>
     </url>
     <url>
         <loc>https://beo.llc/terms.html</loc>
-        <lastmod>2026-02-18</lastmod>
+        <lastmod>2026-07-04</lastmod>
         <priority>0.3</priority>
     </url>
     <url>
         <loc>https://beo.llc/prize-terms.html</loc>
-        <lastmod>2026-02-18</lastmod>
+        <lastmod>2026-07-04</lastmod>
         <priority>0.3</priority>
     </url>
 </urlset>
