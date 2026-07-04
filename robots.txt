@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://beo.llc/sitemap.xml
+Sitemap: https://www.beo.llc/sitemap.xml
